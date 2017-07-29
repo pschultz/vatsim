@@ -115,21 +115,13 @@ Free Text:EDDT TORA\TORA=2428m:freetext
 Free Text:EDDT TORA\TORA=3023m:freetext
 Free Text:EDDT TORA\TORA=3023m:freetext
 Geo:EDDT Groundlayout:
-Runways:EDDT 08L-26R:centerline
-Runways:EDDT 08L-26R:extended centerline 2
-Runways:EDDT 08L-26R:extended centerline 2 left vectoring
-Runways:EDDT 08L-26R:extended centerline 2 right vectoring
-Runways:EDDT 08L-26R:name
-Runways:EDDT 08R-26L:centerline
-Runways:EDDT 08R-26L:extended centerline 1
-Runways:EDDT 08R-26L:name
 VORs:TGL:frequency
 VORs:TGL:name
 VORs:TGL:symbol
 SHOWC:1
 SHOWSB:1
 BELOW:0
-ABOVE:2000
+ABOVE:40000
 LEADER:-1
 SHOWLEADER:1
 TURNLEADER:0
@@ -138,4 +130,4 @@ SIMULATION_MODE:1
 DISABLEPANNING:0
 DISABLEZOOMING:0
 TAGFAMILY:Matias (built in)
-WINDOWAREA:0.000000:0.000000:0.000000:0.000000
+WINDOWAREA:52.550169:13.256339:52.569153:13.316001
