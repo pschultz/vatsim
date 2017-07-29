@@ -1,0 +1,14 @@
+EuroScope Sector File Provider File
+
+NAME:VATSIM Germany Sector File Provider
+URL:http://nav.vatsim-germany.org/files/VATGER_sector_provider.txt
+DOWNLOADINTERVAL:24
+
+PROVIDER_NAME:EDGG Langen FIR - VATSIM Germany
+PROVIDER_URL:http://nav.vatsim-germany.org/files/edgg/ese/public/EDGG_sector_files.txt
+
+PROVIDER_NAME:EDMM Muenchen FIR - VATSIM Germany
+PROVIDER_URL:http://nav.vatsim-germany.org/files/edmm/ese/public/EDMM_sector_files.txt
+
+PROVIDER_NAME:EDWW Bremen FIR - VATSIM Germany
+PROVIDER_URL:http://nav.vatsim-germany.org/files/edww/ese/public/EDWW_sector_files.txt

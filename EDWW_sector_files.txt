@@ -1,0 +1,11 @@
+EuroScope Sector File Provider File
+
+NAME:EDWW Bremen FIR - VATSIM Germany
+URL:http://nav.vatsim-germany.org/files/edww/ese/public/EDWW_sector_files.txt
+
+DOWNLOADINTERVAL:24
+
+SECTOR_NAME:EDWW Bremen FIR - VATSIM Germany Sector and ESE File
+SECTOR_FILE_NAME:EDWW
+SECTOR_VERSION:1603a
+SECTOR_URL:http://nav.vatsim-germany.org/files/edww/ese/public/EDWW_1603a.7z

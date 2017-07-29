@@ -1,0 +1,12 @@
+EuroScope Sector File Provider File
+
+NAME:AeroNav GNG EDMM AeroNav München
+URL:http://files.aero-nav.com/AeroNav_EDMM_by_Aerosoft_NavDataPro.txt
+DOWNLOADINTERVAL:12
+
+
+SECTOR_NAME:EDMM Update-Package
+SECTOR_FILE_NAME:EDMM-AeroNav
+SECTOR_VERSION:20170723172056-170801-0001
+SECTOR_URL:http://files.aero-nav.com/EDMM/Update-Package_20170723172056-170801-1.7z
+

@@ -1,0 +1,12 @@
+EuroScope Sector File Provider File
+
+NAME:AeroNav GNG EDWW Bremen
+URL:http://files.aero-nav.com/AeroNav_EDWW_by_Aerosoft_NavDataPro.txt
+DOWNLOADINTERVAL:12
+
+
+SECTOR_NAME:EDWW AIRAC
+SECTOR_FILE_NAME:EDWW-AIRAC
+SECTOR_VERSION:20170728211320-170801-0001
+SECTOR_URL:http://files.aero-nav.com/EDWW/AIRAC_20170728211320-170801-1.7z
+
