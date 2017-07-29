@@ -1,0 +1,141 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\Peter\Documents\EuroScope\EDWW-AIRAC_20170728211320-170801-0001.sct
+SECTORTITLE:EDWW-AIRAC_20170728211320-170801-0001.sct
+ARTCC low boundary:Restricted area EDWW ED-R146_Berlin_0_5000:
+ARTCC low boundary:Tower CTR EDDT:
+Free Text:EDDT Parking\01:freetext
+Free Text:EDDT Parking\02:freetext
+Free Text:EDDT Parking\03:freetext
+Free Text:EDDT Parking\04:freetext
+Free Text:EDDT Parking\05:freetext
+Free Text:EDDT Parking\06:freetext
+Free Text:EDDT Parking\07:freetext
+Free Text:EDDT Parking\08:freetext
+Free Text:EDDT Parking\09:freetext
+Free Text:EDDT Parking\10:freetext
+Free Text:EDDT Parking\11:freetext
+Free Text:EDDT Parking\12:freetext
+Free Text:EDDT Parking\13:freetext
+Free Text:EDDT Parking\14:freetext
+Free Text:EDDT Parking\15:freetext
+Free Text:EDDT Parking\16:freetext
+Free Text:EDDT Parking\17:freetext
+Free Text:EDDT Parking\18:freetext
+Free Text:EDDT Parking\19:freetext
+Free Text:EDDT Parking\20:freetext
+Free Text:EDDT Parking\21:freetext
+Free Text:EDDT Parking\22:freetext
+Free Text:EDDT Parking\23:freetext
+Free Text:EDDT Parking\24:freetext
+Free Text:EDDT Parking\25:freetext
+Free Text:EDDT Parking\26:freetext
+Free Text:EDDT Parking\27:freetext
+Free Text:EDDT Parking\28:freetext
+Free Text:EDDT Parking\29:freetext
+Free Text:EDDT Parking\31:freetext
+Free Text:EDDT Parking\32:freetext
+Free Text:EDDT Parking\33:freetext
+Free Text:EDDT Parking\34:freetext
+Free Text:EDDT Parking\35:freetext
+Free Text:EDDT Parking\51:freetext
+Free Text:EDDT Parking\52:freetext
+Free Text:EDDT Parking\53:freetext
+Free Text:EDDT Parking\54:freetext
+Free Text:EDDT Parking\55:freetext
+Free Text:EDDT Parking\56:freetext
+Free Text:EDDT Parking\57:freetext
+Free Text:EDDT Parking\58:freetext
+Free Text:EDDT Parking\59:freetext
+Free Text:EDDT Parking\60:freetext
+Free Text:EDDT Parking\61:freetext
+Free Text:EDDT Parking\62:freetext
+Free Text:EDDT Parking\63:freetext
+Free Text:EDDT Parking\63 A:freetext
+Free Text:EDDT Parking\64:freetext
+Free Text:EDDT Parking\65:freetext
+Free Text:EDDT Parking\65 A:freetext
+Free Text:EDDT Parking\A:freetext
+Free Text:EDDT Parking\B:freetext
+Free Text:EDDT Parking\C:freetext
+Free Text:EDDT Parking\D:freetext
+Free Text:EDDT Parking\E:freetext
+Free Text:EDDT Parking\GAT 40:freetext
+Free Text:EDDT Parking\H:freetext
+Free Text:EDDT Parking\H:freetext
+Free Text:EDDT Parking\H:freetext
+Free Text:EDDT Parking\R:freetext
+Free Text:EDDT Parking\S:freetext
+Free Text:EDDT Parking\T:freetext
+Free Text:EDDT Parking\U:freetext
+Free Text:EDDT Parking\V:freetext
+Free Text:EDDT Parking\W:freetext
+Free Text:EDDT Parking\X:freetext
+Free Text:EDDT Parking\Y:freetext
+Free Text:EDDT Parking\Z:freetext
+Free Text:EDDT Taxiway\NE:freetext
+Free Text:EDDT Taxiway\NE:freetext
+Free Text:EDDT Taxiway\NM:freetext
+Free Text:EDDT Taxiway\NM:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\PE:freetext
+Free Text:EDDT Taxiway\PE:freetext
+Free Text:EDDT Taxiway\PM:freetext
+Free Text:EDDT Taxiway\PW:freetext
+Free Text:EDDT Taxiway\PW:freetext
+Free Text:EDDT Taxiway\RE:freetext
+Free Text:EDDT Taxiway\RE:freetext
+Free Text:EDDT Taxiway\RW:freetext
+Free Text:EDDT Taxiway\RW:freetext
+Free Text:EDDT Taxiway\SE:freetext
+Free Text:EDDT Taxiway\SE:freetext
+Free Text:EDDT Taxiway\SE:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SW:freetext
+Free Text:EDDT Taxiway\SW:freetext
+Free Text:EDDT Taxiway\TE:freetext
+Free Text:EDDT Taxiway\TE:freetext
+Free Text:EDDT Taxiway\TM:freetext
+Free Text:EDDT Taxiway\TN:freetext
+Free Text:EDDT Taxiway\TR:freetext
+Free Text:EDDT Taxiway\TS:freetext
+Free Text:EDDT Taxiway\TW:freetext
+Free Text:EDDT Taxiway\TW:freetext
+Free Text:EDDT Taxiway\ZW:freetext
+Free Text:EDDT Taxiway\ZW:freetext
+Free Text:EDDT TORA\TORA=2428m:freetext
+Free Text:EDDT TORA\TORA=2428m:freetext
+Free Text:EDDT TORA\TORA=3023m:freetext
+Free Text:EDDT TORA\TORA=3023m:freetext
+Geo:EDDT Groundlayout:
+Runways:EDDT 08L-26R:centerline
+Runways:EDDT 08L-26R:extended centerline 2
+Runways:EDDT 08L-26R:extended centerline 2 left vectoring
+Runways:EDDT 08L-26R:extended centerline 2 right vectoring
+Runways:EDDT 08L-26R:name
+Runways:EDDT 08R-26L:centerline
+Runways:EDDT 08R-26L:extended centerline 1
+Runways:EDDT 08R-26L:name
+VORs:TGL:frequency
+VORs:TGL:name
+VORs:TGL:symbol
+SHOWC:1
+SHOWSB:1
+BELOW:0
+ABOVE:2000
+LEADER:-1
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+TAGFAMILY:Matias (built in)
+WINDOWAREA:0.000000:0.000000:0.000000:0.000000
