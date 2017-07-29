@@ -1,11 +1,11 @@
 FP
 m_Visible:1
 m_X:0
-m_Y:500
+m_Y:173
 m_LineNumber:6
 m_Resizable:0
 m_OrderingColumn:1
-m_HeaderOnly:0
+m_HeaderOnly:1
 m_Column:C/S:7:0:9:0:0:1::::1917140374
 m_Column:ADEP:5:1:61:0:0:1::::1917140374
 m_Column:ADES:5:1:17:7:0:1::::1917140374
