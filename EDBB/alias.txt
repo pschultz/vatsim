@@ -1,0 +1,62 @@
+.gm $callsign, good morning.
+.ga $callsign, good afternoon.
+.ge $callsign, good evening.
+
+.clr information $atiscode correct, startup approved, cleared $arr via $sid departure, flight planned route, squawk $squawk.
+.clrv information $atiscode correct, startup approved, cleared $arr via radar vectors, initially climb $1 on runway heading, flight planned route, squawk $squawk.
+
+.rc readback correct.
+.sa startup approved.
+
+.p2 pushback approved, facing south.
+.p4 pushback approved, facing west.
+.p6 pushback approved, facing east.
+.p8 pushback approved, facing north.
+
+.th taxi holding point runway $1 via $2.
+.cr cross runway $1.
+.hs hold short of $1.
+.hp hold position.
+.ct continue taxi.
+.tg taxi gate $1 via $2.
+.tp taxi parking position $1 via $2.
+
+.lu line up runway $1 and wait.
+.ta arriving traffic $1 on $2 nm final, report in sight.
+.td departing traffic $1 on $2, report in sight.
+.bl behind this aircraft line up runway $1 and wait behind.
+
+.cft wind $wind($dep), runway $1 cleared for take-off.
+.wt caution wake tubulence.
+.ca continue approach, number $1, $wind($arr).
+.ctl wind $wind($arr), runway $1 cleared to land.
+.gar go around, I say again, go around.
+.cto cancel take-off, stop immediately, hold position.
+
+.co contact $radioname($1) on $freq($1), bye bye.
+
+.sq set squawk $squawk.
+.id identified.
+
+.tl turn left, heading $1.
+.tr turn right, heading $1.
+.fh fly heading $1.
+.mh maintain present heading.
+.pd proceed direct $1.
+.ron resume own navigation.
+
+.df descend FL$1.
+.da descend altitude $1 ft, QNH $altim($arr).
+.dr descend with $1 ft/min.
+.cl climb FL$1.
+.cr climb with $1 ft/min.
+
+.ria report indicated air speed.
+.sp speed $1 kts indicated.
+
+.hap hold over $1 as published.
+.lr leave $1 on radial $2.
+
+.cli cleared ILS approach runway $1.
+.cll cleared localizer runway $1.
+.clv cleared visual approach runway $1.
