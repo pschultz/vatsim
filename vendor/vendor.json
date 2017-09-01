@@ -1,0 +1,301 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "HeAOIQS+TI75+Afm0qgKXdg+37I=",
+			"path": "github.com/PuerkitoBio/goquery",
+			"revision": "ce645ea5e67a713599b7415f21f0786451fa9554",
+			"revisionTime": "2017-08-16T13:38:31Z"
+		},
+		{
+			"checksumSHA1": "2rWSos1D+xqNSGkvEMOG3pntod8=",
+			"path": "github.com/andybalholm/cascadia",
+			"revision": "349dd0209470eabd9514242c688c403c0926d266",
+			"revisionTime": "2016-12-24T14:14:13Z"
+		},
+		{
+			"checksumSHA1": "DoWGsv8aKpO8rHHCfdguKpp7ago=",
+			"path": "github.com/blevesearch/bleve",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "ywqbUZb6r4Mxq2MBAbv/vaYcmdw=",
+			"path": "github.com/blevesearch/bleve/analysis",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "9fbWSIn+xbJ14D2nMF3byvSsXXk=",
+			"path": "github.com/blevesearch/bleve/analysis/analyzer/custom",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "OM2QW7G5DfzaUzCoe23282875TE=",
+			"path": "github.com/blevesearch/bleve/analysis/analyzer/keyword",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "IefDmVwLU3UiILeN35DA25gPFnc=",
+			"path": "github.com/blevesearch/bleve/analysis/analyzer/standard",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "P+ay5l3LO/xoWJXKfyK4Ma1hGvw=",
+			"path": "github.com/blevesearch/bleve/analysis/datetime/flexible",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "uIHCAnZoB7dKDPFc3SkiO1hN4BY=",
+			"path": "github.com/blevesearch/bleve/analysis/datetime/optional",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "AdhWAC/hkZLFXUcihmzhMspNk3w=",
+			"path": "github.com/blevesearch/bleve/analysis/lang/en",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "3VIPkl12t1ko4y6DkbPcz+MtQjY=",
+			"path": "github.com/blevesearch/bleve/analysis/token/lowercase",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "sP0qvqWwZgUMRjK8GU9oobghGFM=",
+			"path": "github.com/blevesearch/bleve/analysis/token/ngram",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "QOw3ypU4VTmFT8XYS/52P3RILZw=",
+			"path": "github.com/blevesearch/bleve/analysis/token/porter",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "8wCAW8E4SO7gGxt0tsr4NZ4APIg=",
+			"path": "github.com/blevesearch/bleve/analysis/token/stop",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "Fj59TrG73yzFxMWQ/rL9VBSgxHE=",
+			"path": "github.com/blevesearch/bleve/analysis/tokenizer/character",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "Lnopn2j55CFd15EBle12dzqQar8=",
+			"path": "github.com/blevesearch/bleve/analysis/tokenizer/single",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "q7C04nlJLxKmemXLop0oyJhfi5M=",
+			"path": "github.com/blevesearch/bleve/analysis/tokenizer/unicode",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "NNcminBISsuVq4QCedtmVMAG4cg=",
+			"path": "github.com/blevesearch/bleve/document",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "8+NkVEqldBSg13whAM0Fgk0aIQU=",
+			"path": "github.com/blevesearch/bleve/geo",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "3g5mI6RHJOPMig/EFHGwJXuYOzg=",
+			"path": "github.com/blevesearch/bleve/index",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "3ttI5qH9k/gOBaW8FJFVmOh5oIA=",
+			"path": "github.com/blevesearch/bleve/index/store",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "9cJS6D7IAwrzK/opywK0ZgAmpTQ=",
+			"path": "github.com/blevesearch/bleve/index/store/boltdb",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "yeAX9ygUYTMbFpL20NJ0MjR7u6M=",
+			"path": "github.com/blevesearch/bleve/index/store/gtreap",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "vKir60Q94/YveElW4PvFctW+Zf8=",
+			"path": "github.com/blevesearch/bleve/index/upsidedown",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "57WkF4dezGS6zce8JqBaXUhRA0U=",
+			"path": "github.com/blevesearch/bleve/mapping",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "Qyi8BmpvHc83X9J06QB7GV7O+6M=",
+			"path": "github.com/blevesearch/bleve/numeric",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "Qj1wH6TzvIl4OAiPQaFDpkWvwLM=",
+			"path": "github.com/blevesearch/bleve/registry",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "ePJbEPLo/mjmNWhK/U/eUf1gUuo=",
+			"path": "github.com/blevesearch/bleve/search",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "Ct0YA2r6ruQ+y6BegLDpxz2Hq+U=",
+			"path": "github.com/blevesearch/bleve/search/collector",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "Vull5Tu4BFP4x3fOA4NCRz852UY=",
+			"path": "github.com/blevesearch/bleve/search/facet",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "J/bdoPp+OZ6vSqsXF10484C7asc=",
+			"path": "github.com/blevesearch/bleve/search/highlight",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "rAz4wfq/O/Tx5aYz/6BN09jm0io=",
+			"path": "github.com/blevesearch/bleve/search/highlight/format/html",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "JQCH82+IdGvTtmKn+rDxCDxISxI=",
+			"path": "github.com/blevesearch/bleve/search/highlight/fragmenter/simple",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "/4Q1eosaGj0eU+F4YWQRdaOS5XA=",
+			"path": "github.com/blevesearch/bleve/search/highlight/highlighter/html",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "m4s4+yGUKuSVYHDOQpzSZ8Jdeyg=",
+			"path": "github.com/blevesearch/bleve/search/highlight/highlighter/simple",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "3c9y+4nTwE5+iW4tdAPAk9M181U=",
+			"path": "github.com/blevesearch/bleve/search/query",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "MdrMXPuAS1dVzjPKP+azDaDBj3Y=",
+			"path": "github.com/blevesearch/bleve/search/scorer",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "Y52+XMCbUH7MTaPdZrULczL1EWY=",
+			"path": "github.com/blevesearch/bleve/search/searcher",
+			"revision": "c048833fcdcf5b86fe09d9c1077147abf8c30416",
+			"revisionTime": "2017-09-01T13:16:08Z"
+		},
+		{
+			"checksumSHA1": "F6iBQThfd04TIlxT49zaPRGvlqE=",
+			"path": "github.com/blevesearch/go-porterstemmer",
+			"revision": "23a2c8e5cf1f380f27722c6d2ae8896431dc7d0e",
+			"revisionTime": "2014-12-30T01:30:33Z"
+		},
+		{
+			"checksumSHA1": "mgj+zuxi8AgQsRmBY8LR2ys4gaM=",
+			"path": "github.com/blevesearch/segment",
+			"revision": "762005e7a34fd909a84586299f1dd457371d36ee",
+			"revisionTime": "2016-09-15T18:50:41Z"
+		},
+		{
+			"checksumSHA1": "R1Q34Pfnt197F/nCOO9kG8c+Z90=",
+			"path": "github.com/boltdb/bolt",
+			"revision": "2f1ce7a837dcb8da3ec595b1dac9d0632f0f99e8",
+			"revisionTime": "2017-07-17T17:11:48Z"
+		},
+		{
+			"checksumSHA1": "s3nVZF+PntuosFTcGqS+K9YtRPU=",
+			"path": "github.com/claudetech/ini",
+			"revision": "73e6100d9d518ebaf96bf607a7d4235ba9ad0cd8",
+			"revisionTime": "2014-09-10T07:24:10Z"
+		},
+		{
+			"checksumSHA1": "yqF125xVSkmfLpIVGrLlfE05IUk=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "5afd06f9d81a86d6e3bb7dc702d6bd148ea3ff23",
+			"revisionTime": "2017-09-01T04:27:39Z"
+		},
+		{
+			"checksumSHA1": "EHjhpHipgm+XGccrRAms9AW3Ewk=",
+			"path": "github.com/mitchellh/mapstructure",
+			"revision": "d0303fe809921458f417bcf828397a65db30a7e4",
+			"revisionTime": "2017-05-23T03:00:23Z"
+		},
+		{
+			"checksumSHA1": "KE+vv2khbshw+PA9UyHHxd8WKKw=",
+			"path": "github.com/steveyen/gtreap",
+			"revision": "0abe01ef9be25c4aedc174758ec2d917314d6d70",
+			"revisionTime": "2015-08-07T15:59:58Z"
+		},
+		{
+			"checksumSHA1": "dr5+PfIRzXeN+l1VG+s0lea9qz8=",
+			"path": "golang.org/x/net/context",
+			"revision": "66aacef3dd8a676686c7ae3716979581e8b03c47",
+			"revisionTime": "2016-09-14T00:11:54Z"
+		},
+		{
+			"checksumSHA1": "vqc3a+oTUGX8PmD0TS+qQ7gmN8I=",
+			"path": "golang.org/x/net/html",
+			"revision": "66aacef3dd8a676686c7ae3716979581e8b03c47",
+			"revisionTime": "2016-09-14T00:11:54Z"
+		},
+		{
+			"checksumSHA1": "00eQaGynDYrv3tL+C7l9xH0IDZg=",
+			"path": "golang.org/x/net/html/atom",
+			"revision": "66aacef3dd8a676686c7ae3716979581e8b03c47",
+			"revisionTime": "2016-09-14T00:11:54Z"
+		},
+		{
+			"checksumSHA1": "L3tXuh/pDgQbi7y9/xIBhP0wkbs=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "a07a691ac871746ae690ccf3ab217363b2144531",
+			"revisionTime": "2017-08-30T09:57:17Z"
+		}
+	],
+	"rootPath": "github.com/pschultz/vatsim"
+}
