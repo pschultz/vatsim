@@ -1,0 +1,79 @@
+.on /Good evening, $radioname is online.
+.off /$radioname is closing. Good night for all.
+.good Good evening sir. 
+.good2 Good evening sir, radar contact.
+.good3 Good evening sir, radar contact. Continue as filed.
+.radar Radar contact.
+.filed Continue as filed.
+
+.clear Cleared for an IFR flight to your destination as filed. Departure RWY is $deprwy with $sid departure route. Initially climb to 7000 by QNH $altim(LHBP). SQ is $asquawk
+.clear2 Cleared for an IFR flight to your destination as filed. Departure RWY is $deprwy. After departure on RWY heading climb to 7000 by QNH $altim(LHBP). SQ is $asquawk
+.clearok Clearence correct. Engine startup and pushback approved. Report when ready for taxi.
+.taxirw Taxi to $1 holding position of RWY $2 via $3 Report when ready for departure.
+.taxito Welcome to Budapest. Taxi to $1 via $2. Report engine shutdown.
+.to RWY $deprwy, cleared for takeoff. Wind is $2 at $3
+.to2 RWY $deprwy, cleared for takeoff. Wind calm.
+
+.dmby Descent to $1 by QNH $altim(LHBP)
+..dmby Emelekedjetek $1 lábra QNH $altim(LHBP) szerint
+.cmby Climb to $1 by QNH $altim(LHBP)
+..cmby Emelekedjetek $1 lábra QNH $altim(LHBP) szerint
+.dm Descent to $1 ft
+..dm Sûllyedjetek $1 lábra
+.cm Climb to $1 ft
+..cm Emelekedjetek $1 lábra
+.dmfl Descent to FL$1
+..dmfl Súllyedjetek FL$1-ra
+.cmfl Climb to FL$1
+..cmfl Emelkedjetek FL$1-ra
+.speed Speed is $1 kts
+
+.dmto Descent to reach $1 by $2
+.tl Turn left heading $1.
+.tr Turn right heading $1.
+.fh Fly on heading $1.
+.expect Expect ILS approach RWY $1.
+.expect2 Expect ILS approach RWY $1 as Nr $2.
+.expectv Expect visual approach RWY $1.
+.expectfl Expect $1 over $2. Advise me when ready for descent.
+.pd Proceed direct to $1.
+.short Shortcut to $1
+.hold Join to the holding pattern over $1 as published.
+.leave Leave the holding pattern and continue transition.
+.ils Cleared ILS approach RW $1. Report when established.
+.capp Continue approach to RWY $1. Wind is $2 at $3. Expect late clearance.
+.capp2 Continue approach to RWY $1. Wind calm. Expect late clearance.
+.land RWY $1. Cleared to land. Wind is $2 at $3. Report when RWY is vacated.
+.land2 Cleared to land RWY $1. Wind calm. Report when RWY is vacated.
+.shut Engine shutdown approved. FP closed at $1. Thank you for flying to Budapest. Have a good night.
+.sb Set your squawk to stand by on the ground, please.
+.sc Set your squawk to C mode, please.
+
+.ctr Contact Budapest radar on 133.2. Bye.
+.app Contact Budapest approach on 129.7. Bye.
+.twr Contact Tower on 118.1. Bye.
+.gnd Welcome to Budapest. Contact ground on 121.9. Bye.
+.praha Contact Praha radar on. Good by.
+.bratislava Contact Bratislava radar on. Good by.
+.euro Contact Eurocontrol on 135.35. Have a good flight. Good bye.
+.cont Contact now $radioname($1) on frequency $freq($1), have a good flight and landing. 
+.rfis $arr is at your $oclock($arr) $dist($arr)
+
+.unicom You are leaving my airspace and no further ATC available. Resume own navigation, change freq to UNICOM. Have a good flight and landing. Bye.
+.hold Join to the holding pattern over TPS as filed, at $1.
+.new Are you ready for the new transitions in the Budapest TMA?
+
+.rs Report your speed.
+.red Reduce speed $1 kts.
+.redl Reduce speed $1 kts or less.
+.redm Reduce speed to your minimum clean.
+.redf Reduce to final approach speed.
+.ident Squawk ident please if you read me.
+
+Emergency
+.emerg You emergency has been acknowledged. How much fuel and how many passengers do you have on board.
+.problem Could you please confirm, the problem ?
+.priority You will get priority landing for the best available runway.
+.tell We have an emergency aircraft, you may expect some delay and holding.
+
+.radar radar contact $dist($1) miles $bear($1) of $1, $calt

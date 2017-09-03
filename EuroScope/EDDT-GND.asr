@@ -1,0 +1,449 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\Peter\Documents\EuroScope\EDWW_1603a.sct
+SECTORTITLE:EDWW_1603a.sct
+ARTCC boundary:EDWW_A_CTR/Position:
+ARTCC boundary:EDWW_B_CTR/Position:
+ARTCC boundary:FIR_EBBU:
+ARTCC boundary:FIR_EDGG:
+ARTCC boundary:FIR_EDMM:
+ARTCC boundary:FIR_EDWW:
+ARTCC boundary:FIR_EHAA:
+ARTCC boundary:FIR_EKDK:
+ARTCC boundary:FIR_EPWW:
+ARTCC boundary:FIR_LDZO:
+ARTCC boundary:FIR_LFEE:
+ARTCC boundary:FIR_LFFF:
+ARTCC boundary:FIR_LFMM:
+ARTCC boundary:FIR_LHCC:
+ARTCC boundary:FIR_LIMM:
+ARTCC boundary:FIR_LJLA:
+ARTCC boundary:FIR_LKAA:
+ARTCC boundary:FIR_LOVV:
+ARTCC boundary:FIR_LSAS:
+ARTCC boundary:FIR_LZBB:
+ARTCC low boundary:EDDB/CTR:
+ARTCC low boundary:EDDT/CTR:
+ARTCC low boundary:Restriced/ED-R146_Berlin_0_5000:
+Free Text:EDDB\19:freetext
+Free Text:EDDB\20:freetext
+Free Text:EDDB\20S:freetext
+Free Text:EDDB\21:freetext
+Free Text:EDDB\22:freetext
+Free Text:EDDB\23:freetext
+Free Text:EDDB\23S:freetext
+Free Text:EDDB\24:freetext
+Free Text:EDDB\25:freetext
+Free Text:EDDB\26:freetext
+Free Text:EDDB\26S:freetext
+Free Text:EDDB\27:freetext
+Free Text:EDDB\30:freetext
+Free Text:EDDB\31:freetext
+Free Text:EDDB\33:freetext
+Free Text:EDDB\34:freetext
+Free Text:EDDB\35:freetext
+Free Text:EDDB\36:freetext
+Free Text:EDDB\40:freetext
+Free Text:EDDB\41:freetext
+Free Text:EDDB\50:freetext
+Free Text:EDDB\51:freetext
+Free Text:EDDB\52:freetext
+Free Text:EDDB\53:freetext
+Free Text:EDDB\54:freetext
+Free Text:EDDB\55:freetext
+Free Text:EDDB\56:freetext
+Free Text:EDDB\57:freetext
+Free Text:EDDB\58:freetext
+Free Text:EDDB\59:freetext
+Free Text:EDDB\60:freetext
+Free Text:EDDB\61:freetext
+Free Text:EDDB\62:freetext
+Free Text:EDDB\63:freetext
+Free Text:EDDB\64:freetext
+Free Text:EDDB\A:freetext
+Free Text:EDDB\A:freetext
+Free Text:EDDB\A:freetext
+Free Text:EDDB\A01:freetext
+Free Text:EDDB\A02:freetext
+Free Text:EDDB\A03:freetext
+Free Text:EDDB\A04:freetext
+Free Text:EDDB\A05:freetext
+Free Text:EDDB\A06:freetext
+Free Text:EDDB\A07:freetext
+Free Text:EDDB\A08:freetext
+Free Text:EDDB\A09:freetext
+Free Text:EDDB\A10:freetext
+Free Text:EDDB\A11:freetext
+Free Text:EDDB\A12:freetext
+Free Text:EDDB\B:freetext
+Free Text:EDDB\B:freetext
+Free Text:EDDB\B01:freetext
+Free Text:EDDB\B01A:freetext
+Free Text:EDDB\B02:freetext
+Free Text:EDDB\B03:freetext
+Free Text:EDDB\B03A:freetext
+Free Text:EDDB\B04:freetext
+Free Text:EDDB\B05:freetext
+Free Text:EDDB\B05A:freetext
+Free Text:EDDB\B06:freetext
+Free Text:EDDB\B07:freetext
+Free Text:EDDB\B07A:freetext
+Free Text:EDDB\B07B:freetext
+Free Text:EDDB\B08:freetext
+Free Text:EDDB\B09:freetext
+Free Text:EDDB\B09A:freetext
+Free Text:EDDB\B1:freetext
+Free Text:EDDB\B10:freetext
+Free Text:EDDB\B11:freetext
+Free Text:EDDB\B11A:freetext
+Free Text:EDDB\B12:freetext
+Free Text:EDDB\B13:freetext
+Free Text:EDDB\B13A:freetext
+Free Text:EDDB\B14:freetext
+Free Text:EDDB\B15:freetext
+Free Text:EDDB\B15A:freetext
+Free Text:EDDB\B15B:freetext
+Free Text:EDDB\B16:freetext
+Free Text:EDDB\C:freetext
+Free Text:EDDB\C:freetext
+Free Text:EDDB\C:freetext
+Free Text:EDDB\C01:freetext
+Free Text:EDDB\C02:freetext
+Free Text:EDDB\C03:freetext
+Free Text:EDDB\C04:freetext
+Free Text:EDDB\C05:freetext
+Free Text:EDDB\C05A:freetext
+Free Text:EDDB\C06:freetext
+Free Text:EDDB\C07:freetext
+Free Text:EDDB\C07A:freetext
+Free Text:EDDB\C08:freetext
+Free Text:EDDB\C09:freetext
+Free Text:EDDB\C09A:freetext
+Free Text:EDDB\C1:freetext
+Free Text:EDDB\C10:freetext
+Free Text:EDDB\C11:freetext
+Free Text:EDDB\C11A:freetext
+Free Text:EDDB\C12:freetext
+Free Text:EDDB\C13:freetext
+Free Text:EDDB\C14:freetext
+Free Text:EDDB\C14A:freetext
+Free Text:EDDB\C15:freetext
+Free Text:EDDB\D:freetext
+Free Text:EDDB\D:freetext
+Free Text:EDDB\D:freetext
+Free Text:EDDB\D:freetext
+Free Text:EDDB\D:freetext
+Free Text:EDDB\D01:freetext
+Free Text:EDDB\D02:freetext
+Free Text:EDDB\D03:freetext
+Free Text:EDDB\D03A:freetext
+Free Text:EDDB\D04:freetext
+Free Text:EDDB\D05:freetext
+Free Text:EDDB\D05A:freetext
+Free Text:EDDB\D05B:freetext
+Free Text:EDDB\D06:freetext
+Free Text:EDDB\D07:freetext
+Free Text:EDDB\D07A:freetext
+Free Text:EDDB\D08:freetext
+Free Text:EDDB\D09:freetext
+Free Text:EDDB\D09A:freetext
+Free Text:EDDB\D10:freetext
+Free Text:EDDB\D11:freetext
+Free Text:EDDB\D11A:freetext
+Free Text:EDDB\D12:freetext
+Free Text:EDDB\D13:freetext
+Free Text:EDDB\D13A:freetext
+Free Text:EDDB\D13B:freetext
+Free Text:EDDB\D14:freetext
+Free Text:EDDB\D15:freetext
+Free Text:EDDB\D15A:freetext
+Free Text:EDDB\D16:freetext
+Free Text:EDDB\D17:freetext
+Free Text:EDDB\D17A:freetext
+Free Text:EDDB\D18:freetext
+Free Text:EDDB\D19:freetext
+Free Text:EDDB\D19A:freetext
+Free Text:EDDB\D20:freetext
+Free Text:EDDB\D21:freetext
+Free Text:EDDB\D21A:freetext
+Free Text:EDDB\D22:freetext
+Free Text:EDDB\E:freetext
+Free Text:EDDB\E. north:freetext
+Free Text:EDDB\E. south:freetext
+Free Text:EDDB\E01:freetext
+Free Text:EDDB\E02:freetext
+Free Text:EDDB\E03:freetext
+Free Text:EDDB\E04:freetext
+Free Text:EDDB\E05:freetext
+Free Text:EDDB\E06:freetext
+Free Text:EDDB\E07:freetext
+Free Text:EDDB\E08:freetext
+Free Text:EDDB\E09:freetext
+Free Text:EDDB\E10:freetext
+Free Text:EDDB\E11:freetext
+Free Text:EDDB\E12:freetext
+Free Text:EDDB\E13:freetext
+Free Text:EDDB\E14:freetext
+Free Text:EDDB\E15:freetext
+Free Text:EDDB\E16:freetext
+Free Text:EDDB\E17:freetext
+Free Text:EDDB\E18:freetext
+Free Text:EDDB\E19:freetext
+Free Text:EDDB\F:freetext
+Free Text:EDDB\G:freetext
+Free Text:EDDB\H:freetext
+Free Text:EDDB\H:freetext
+Free Text:EDDB\J:freetext
+Free Text:EDDB\K:freetext
+Free Text:EDDB\K:freetext
+Free Text:EDDB\K1:freetext
+Free Text:EDDB\K2:freetext
+Free Text:EDDB\K3:freetext
+Free Text:EDDB\K3:freetext
+Free Text:EDDB\K4:freetext
+Free Text:EDDB\K4:freetext
+Free Text:EDDB\K4:freetext
+Free Text:EDDB\K5:freetext
+Free Text:EDDB\L1:freetext
+Free Text:EDDB\L2:freetext
+Free Text:EDDB\L3:freetext
+Free Text:EDDB\L4:freetext
+Free Text:EDDB\L5:freetext
+Free Text:EDDB\L5:freetext
+Free Text:EDDB\L6:freetext
+Free Text:EDDB\L6:freetext
+Free Text:EDDB\L7:freetext
+Free Text:EDDB\L7:freetext
+Free Text:EDDB\L8:freetext
+Free Text:EDDB\M. lane:freetext
+Free Text:EDDB\M1:freetext
+Free Text:EDDB\M2:freetext
+Free Text:EDDB\M3:freetext
+Free Text:EDDB\M4:freetext
+Free Text:EDDB\M5:freetext
+Free Text:EDDB\M6:freetext
+Free Text:EDDB\M7:freetext
+Free Text:EDDB\M8:freetext
+Free Text:EDDB\N1:freetext
+Free Text:EDDB\N1:freetext
+Free Text:EDDB\N1:freetext
+Free Text:EDDB\N1:freetext
+Free Text:EDDB\N2:freetext
+Free Text:EDDB\N2:freetext
+Free Text:EDDB\P. lane:freetext
+Free Text:EDDB\P1:freetext
+Free Text:EDDB\P1:freetext
+Free Text:EDDB\P1:freetext
+Free Text:EDDB\P2:freetext
+Free Text:EDDB\P2:freetext
+Free Text:EDDB\P2:freetext
+Free Text:EDDB\Q:freetext
+Free Text:EDDB\Q1:freetext
+Free Text:EDDB\Q2:freetext
+Free Text:EDDB\R:freetext
+Free Text:EDDB\T:freetext
+Free Text:EDDB\T:freetext
+Free Text:EDDB\V1:freetext
+Free Text:EDDB\V1:freetext
+Free Text:EDDB\V1:freetext
+Free Text:EDDB\V2:freetext
+Free Text:EDDB\V2:freetext
+Free Text:EDDB\V2:freetext
+Free Text:EDDB\VC:freetext
+Free Text:EDDB\Y:freetext
+Free Text:EDDT Parking\01:freetext
+Free Text:EDDT Parking\02:freetext
+Free Text:EDDT Parking\03:freetext
+Free Text:EDDT Parking\04:freetext
+Free Text:EDDT Parking\05:freetext
+Free Text:EDDT Parking\06:freetext
+Free Text:EDDT Parking\07:freetext
+Free Text:EDDT Parking\08:freetext
+Free Text:EDDT Parking\09:freetext
+Free Text:EDDT Parking\10:freetext
+Free Text:EDDT Parking\11:freetext
+Free Text:EDDT Parking\12:freetext
+Free Text:EDDT Parking\13:freetext
+Free Text:EDDT Parking\14:freetext
+Free Text:EDDT Parking\15:freetext
+Free Text:EDDT Parking\16:freetext
+Free Text:EDDT Parking\17:freetext
+Free Text:EDDT Parking\18:freetext
+Free Text:EDDT Parking\19:freetext
+Free Text:EDDT Parking\20:freetext
+Free Text:EDDT Parking\21:freetext
+Free Text:EDDT Parking\22:freetext
+Free Text:EDDT Parking\23:freetext
+Free Text:EDDT Parking\24:freetext
+Free Text:EDDT Parking\25:freetext
+Free Text:EDDT Parking\26:freetext
+Free Text:EDDT Parking\27:freetext
+Free Text:EDDT Parking\28:freetext
+Free Text:EDDT Parking\29:freetext
+Free Text:EDDT Parking\31:freetext
+Free Text:EDDT Parking\32:freetext
+Free Text:EDDT Parking\33:freetext
+Free Text:EDDT Parking\34:freetext
+Free Text:EDDT Parking\35:freetext
+Free Text:EDDT Parking\51:freetext
+Free Text:EDDT Parking\52:freetext
+Free Text:EDDT Parking\53:freetext
+Free Text:EDDT Parking\54:freetext
+Free Text:EDDT Parking\55:freetext
+Free Text:EDDT Parking\56:freetext
+Free Text:EDDT Parking\57:freetext
+Free Text:EDDT Parking\58:freetext
+Free Text:EDDT Parking\59:freetext
+Free Text:EDDT Parking\60:freetext
+Free Text:EDDT Parking\61:freetext
+Free Text:EDDT Parking\62:freetext
+Free Text:EDDT Parking\63:freetext
+Free Text:EDDT Parking\63 A:freetext
+Free Text:EDDT Parking\64:freetext
+Free Text:EDDT Parking\65:freetext
+Free Text:EDDT Parking\65 A:freetext
+Free Text:EDDT Parking\A:freetext
+Free Text:EDDT Parking\B:freetext
+Free Text:EDDT Parking\C:freetext
+Free Text:EDDT Parking\D:freetext
+Free Text:EDDT Parking\E:freetext
+Free Text:EDDT Parking\GAT 40:freetext
+Free Text:EDDT Parking\H:freetext
+Free Text:EDDT Parking\H:freetext
+Free Text:EDDT Parking\H:freetext
+Free Text:EDDT Parking\R:freetext
+Free Text:EDDT Parking\S:freetext
+Free Text:EDDT Parking\T:freetext
+Free Text:EDDT Parking\U:freetext
+Free Text:EDDT Parking\V:freetext
+Free Text:EDDT Parking\W:freetext
+Free Text:EDDT Parking\X:freetext
+Free Text:EDDT Parking\Y:freetext
+Free Text:EDDT Parking\Z:freetext
+Free Text:EDDT Taxiway\NE:freetext
+Free Text:EDDT Taxiway\NE:freetext
+Free Text:EDDT Taxiway\NM:freetext
+Free Text:EDDT Taxiway\NM:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\NW:freetext
+Free Text:EDDT Taxiway\PE:freetext
+Free Text:EDDT Taxiway\PE:freetext
+Free Text:EDDT Taxiway\PM:freetext
+Free Text:EDDT Taxiway\PW:freetext
+Free Text:EDDT Taxiway\PW:freetext
+Free Text:EDDT Taxiway\RE:freetext
+Free Text:EDDT Taxiway\RE:freetext
+Free Text:EDDT Taxiway\RW:freetext
+Free Text:EDDT Taxiway\RW:freetext
+Free Text:EDDT Taxiway\SE:freetext
+Free Text:EDDT Taxiway\SE:freetext
+Free Text:EDDT Taxiway\SE:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SM:freetext
+Free Text:EDDT Taxiway\SW:freetext
+Free Text:EDDT Taxiway\SW:freetext
+Free Text:EDDT Taxiway\TE:freetext
+Free Text:EDDT Taxiway\TE:freetext
+Free Text:EDDT Taxiway\TM:freetext
+Free Text:EDDT Taxiway\TN:freetext
+Free Text:EDDT Taxiway\TR:freetext
+Free Text:EDDT Taxiway\TS:freetext
+Free Text:EDDT Taxiway\TW:freetext
+Free Text:EDDT Taxiway\TW:freetext
+Free Text:EDDT Taxiway\ZW:freetext
+Free Text:EDDT Taxiway\ZW:freetext
+Geo:EDDB:
+Geo:EDDB_vector_07:
+Geo:EDDB_vector_25:
+Geo:EDDT:
+Regions:EDBC:polygon
+Regions:EDCD:polygon
+Regions:EDDB:polygon
+Regions:EDDT:polygon
+Regions:EDQC:polygon
+Regions:EDQK:polygon
+Regions:EDVE:polygon
+Regions:EDVK:polygon
+Regions:ETIC:polygon
+Runways:EDDB 07L-25R:centerline
+Runways:EDDB 07L-25R:extended centerline 1
+Runways:EDDB 07L-25R:extended centerline 1 left base
+Runways:EDDB 07L-25R:extended centerline 1 left ticks
+Runways:EDDB 07L-25R:extended centerline 1 left vectoring
+Runways:EDDB 07L-25R:extended centerline 1 right base
+Runways:EDDB 07L-25R:extended centerline 1 right ticks
+Runways:EDDB 07L-25R:extended centerline 1 right vectoring
+Runways:EDDB 07L-25R:extended centerline 2
+Runways:EDDB 07L-25R:extended centerline 2 left base
+Runways:EDDB 07L-25R:extended centerline 2 left ticks
+Runways:EDDB 07L-25R:extended centerline 2 left vectoring
+Runways:EDDB 07L-25R:extended centerline 2 right base
+Runways:EDDB 07L-25R:extended centerline 2 right ticks
+Runways:EDDB 07L-25R:extended centerline 2 right vectoring
+Runways:EDDB 07L-25R:name
+Runways:EDDB 07R-25L:centerline
+Runways:EDDB 07R-25L:extended centerline 1
+Runways:EDDB 07R-25L:extended centerline 1 left base
+Runways:EDDB 07R-25L:extended centerline 1 left ticks
+Runways:EDDB 07R-25L:extended centerline 1 left vectoring
+Runways:EDDB 07R-25L:extended centerline 1 right base
+Runways:EDDB 07R-25L:extended centerline 1 right ticks
+Runways:EDDB 07R-25L:extended centerline 1 right vectoring
+Runways:EDDB 07R-25L:extended centerline 2
+Runways:EDDB 07R-25L:extended centerline 2 left base
+Runways:EDDB 07R-25L:extended centerline 2 left ticks
+Runways:EDDB 07R-25L:extended centerline 2 left vectoring
+Runways:EDDB 07R-25L:extended centerline 2 right base
+Runways:EDDB 07R-25L:extended centerline 2 right ticks
+Runways:EDDB 07R-25L:extended centerline 2 right vectoring
+Runways:EDDB 07R-25L:name
+Runways:EDDT 08L-26R:centerline
+Runways:EDDT 08L-26R:extended centerline 1
+Runways:EDDT 08L-26R:extended centerline 1 left base
+Runways:EDDT 08L-26R:extended centerline 1 left ticks
+Runways:EDDT 08L-26R:extended centerline 1 left vectoring
+Runways:EDDT 08L-26R:extended centerline 1 right base
+Runways:EDDT 08L-26R:extended centerline 1 right ticks
+Runways:EDDT 08L-26R:extended centerline 1 right vectoring
+Runways:EDDT 08L-26R:extended centerline 2
+Runways:EDDT 08L-26R:extended centerline 2 left base
+Runways:EDDT 08L-26R:extended centerline 2 left ticks
+Runways:EDDT 08L-26R:extended centerline 2 left vectoring
+Runways:EDDT 08L-26R:extended centerline 2 right base
+Runways:EDDT 08L-26R:extended centerline 2 right ticks
+Runways:EDDT 08L-26R:extended centerline 2 right vectoring
+Runways:EDDT 08L-26R:name
+Runways:EDDT 08R-26L:centerline
+Runways:EDDT 08R-26L:extended centerline 1
+Runways:EDDT 08R-26L:extended centerline 1 left base
+Runways:EDDT 08R-26L:extended centerline 1 left ticks
+Runways:EDDT 08R-26L:extended centerline 1 left vectoring
+Runways:EDDT 08R-26L:extended centerline 1 right base
+Runways:EDDT 08R-26L:extended centerline 1 right ticks
+Runways:EDDT 08R-26L:extended centerline 1 right vectoring
+Runways:EDDT 08R-26L:extended centerline 2
+Runways:EDDT 08R-26L:extended centerline 2 left base
+Runways:EDDT 08R-26L:extended centerline 2 left ticks
+Runways:EDDT 08R-26L:extended centerline 2 left vectoring
+Runways:EDDT 08R-26L:extended centerline 2 right base
+Runways:EDDT 08R-26L:extended centerline 2 right ticks
+Runways:EDDT 08R-26L:extended centerline 2 right vectoring
+Runways:EDDT 08R-26L:name
+SHOWC:1
+SHOWSB:1
+BELOW:0
+ABOVE:2000
+LEADER:-1
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+TAGFAMILY:TR-Tower
+WINDOWAREA:52.546388:13.254360:52.569853:13.328102

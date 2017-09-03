@@ -1,0 +1,12 @@
+/ATCOsimEffects
+/Scenario/LUKK
+/atis/ExampleAtisFiles.txt
+/atis_demo
+/version.txt
+*Hungar*
+*.prf
+*.asr
+*.ese
+*.rwy
+*.sct
+*.wav
