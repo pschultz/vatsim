@@ -56,7 +56,7 @@ func CreateIndex() (bleve.Index, error) {
 	woaiMapping := bleve.NewDocumentMapping()
 	woaiMapping.AddFieldMappingsAt("title", icaoMapping)
 	woaiMapping.AddFieldMappingsAt("sim", icaoMapping)
-	woaiMapping.AddFieldMappingsAt("atc_airline", icaoMapping)
+	woaiMapping.AddFieldMappingsAt("atc_airline", keywordMapping)
 	woaiMapping.AddFieldMappingsAt("atc_model", keywordMapping)
 	woaiMapping.AddFieldMappingsAt("ui_type", icaoMapping)
 
@@ -74,28 +74,86 @@ func CreateIndex() (bleve.Index, error) {
 }
 
 func Index(index bleve.Index, typ, id string, doc map[string]string) error {
+	if doc["atc_airline"] != "LUFTHANSA" {
+		return nil
+	}
+
 	doc["_type"] = typ
 	return index.Index(id, doc)
 }
 
 func Search(index bleve.Index, ac Model) ([]string, error) {
-	query := bleve.NewBooleanQuery()
-	query.AddMust(bleve.NewTermQuery(ac.AL))
-	query.AddMust(bleve.NewTermQuery(ac.AC))
-	if len(ac.Terms) > 0 {
-		for _, t := range ac.Terms {
-			query.AddShould(bleve.NewMatchQuery(t))
-		}
-		query.SetMinShould(0.0)
+	// The airline *must* match, otherwise we give up immediately. We don't
+	// care too much if the model is lightly off, but the paint must be
+	// correct. So we first lookup all the IDs for the airline.
+
+	if ac.ALKeyword == "" {
+		return nil, fmt.Errorf("missing airline keyword: %v", ac.AL)
 	}
-	search := bleve.NewSearchRequest(query)
+
+	alQuery := bleve.NewTermQuery(ac.ALKeyword)
+	alQuery.FieldVal = "atc_airline"
+
+	search := bleve.NewSearchRequest(alQuery)
 	search.Size = 1 << 30
-	search.Fields = []string{"title"}
 	searchResults, err := index.Search(search)
 	if err != nil {
 		return nil, err
 	}
+	if searchResults.Total == 0 {
+		return nil, nil
+	}
 
+	idQuery := bleve.NewDocIDQuery(nil)
+	idQuery.IDs = make([]string, 0, searchResults.Total)
+	for _, h := range searchResults.Hits {
+		idQuery.IDs = append(idQuery.IDs, h.ID)
+	}
+
+	// Next, check if there is a perfect match in "atc_model".
+
+	acQuery := bleve.NewTermQuery(ac.AC)
+	acQuery.FieldVal = "atc_model"
+
+	query := bleve.NewBooleanQuery()
+	query.AddMust(idQuery)
+	query.AddMust(acQuery)
+
+	search = bleve.NewSearchRequest(query)
+	search.Size = 1
+	search.Fields = []string{"title"}
+	searchResults, err = index.Search(search)
+	if err != nil {
+		return nil, err
+	}
+	if searchResults.Total == 1 {
+		return titles(searchResults), nil
+	}
+
+	// Still no luck. Now search in _all and also try the fulltext terms.
+
+	acQuery = bleve.NewTermQuery(ac.AC)
+
+	query = bleve.NewBooleanQuery()
+	query.AddMust(idQuery)
+	query.AddShould(acQuery)
+	for _, t := range ac.Terms {
+		query.AddShould(bleve.NewMatchQuery(t))
+	}
+	query.SetMinShould(1.0)
+
+	search = bleve.NewSearchRequest(query)
+	search.Size = 1
+	search.Fields = []string{"title"}
+	searchResults, err = index.Search(search)
+	if err != nil {
+		return nil, err
+	}
+
+	return titles(searchResults), nil
+}
+
+func titles(searchResults *bleve.SearchResult) []string {
 	var titles []string
 	for _, h := range searchResults.Hits {
 		switch x := h.Fields["title"].(type) {
@@ -104,10 +162,10 @@ func Search(index bleve.Index, ac Model) ([]string, error) {
 		case []string:
 			titles = append(titles, x...)
 		default:
-			return nil, fmt.Errorf("unexpected type for 'title': %T", h.Fields["title"])
+			panic(fmt.Sprintf("unexpected type for 'title': %T", h.Fields["title"]))
 		}
 	}
-	return titles, nil
+	return titles
 }
 
 func DumpAll(index bleve.Index) {

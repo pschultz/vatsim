@@ -18,7 +18,13 @@ import (
 	"github.com/blevesearch/bleve"
 )
 
+var FSXRoot = "/mnt/c/Program Files (x86)/Steam/steamapps/common/FSX"
+
 func main() {
+	if d := os.Getenv("FSX_ROOT"); d != "" {
+		FSXRoot = d
+	}
+
 	watch := flag.Bool("watch", false, "Monitor the vatsim API and update the ruleset when never-seen-before aircraft appear.")
 	flag.Parse()
 
@@ -54,26 +60,22 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = filepath.Walk("woai", func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		if filepath.Base(path) != "Aircraft.cfg" {
-			return nil
-		}
+	paths, err := filepath.Glob(filepath.Join(FSXRoot, "SimObjects/Airplanes/*/aircraft.cfg"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, path := range paths {
 		cfg, err := AircraftConfig(path)
 		if err != nil {
-			return err
+			log.Println(path, err)
+			continue
 		}
 		for id, doc := range cfg {
 			if err := Index(index, "woai", id, doc); err != nil {
-				log.Fatal(err)
+				log.Fatal(path, err)
 			}
 		}
-		return nil
-	})
-	if err != nil {
-		log.Fatal(err)
 	}
 
 	//DumpAll(index)
@@ -156,20 +158,19 @@ type Rule struct {
 	AL         string   `xml:"CallsignPrefix,attr"`
 	AC         string   `xml:"TypeCode,attr"`
 	Model      string   `xml:"ModelName,attr"`
-	Substitute bool     `xml:"Substitute,attr"`
+	Substitute bool     `xml:"Substitute,attr,omitempty"`
 }
 
 func buildMapping(index bleve.Index, db *Database) (*RuleSet, error) {
 	rs := &RuleSet{}
 
 	for _, ac := range db.All() {
-		/*
-			switch ac.AL {
-			case "DLH": //, "QTR", "BAW":
-			default:
-				continue
-			}
-		*/
+		switch ac.AL {
+		case "DLH": //, "QTR", "BAW":
+		default:
+			continue
+		}
+
 		titles, err := Search(index, ac)
 		if err != nil {
 			return nil, err

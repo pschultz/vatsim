@@ -15,8 +15,9 @@ type Database struct {
 }
 
 type Model struct {
-	AC string // Aircraft ICAO
-	AL string // Airline ICAO
+	AC        string // Aircraft ICAO
+	AL        string // Airline ICAO
+	ALKeyword string
 
 	Terms []string // Terms for fulltext search
 
@@ -64,8 +65,8 @@ func (d *Database) ReadEuroScopeICAO(r io.Reader) error {
 			// Aircraft. Not sure what the second column is; ignore.
 			d.euroScopeICAO[fields[0]] = fields[2:]
 		case 3:
-			// Airline
-			d.euroScopeICAO[fields[0]] = fields[1:]
+			// Airline. Grab only the keyword.
+			d.euroScopeICAO[fields[0]] = fields[2:]
 		}
 	}
 
@@ -112,20 +113,21 @@ func (d *Database) All() []Model {
 				continue
 			}
 			seen[ac] = true
+			keywords := d.euroScopeICAO[al]
+			if len(keywords) == 0 {
+				continue
+			}
+
 			x = append(x, Model{
-				AC:    ac,
-				AL:    al,
-				Terms: append(d.euroScopeICAO[ac], d.euroScopeICAO[al]...),
+				AC:        ac,
+				AL:        al,
+				ALKeyword: keywords[0],
+				Terms:     d.euroScopeICAO[ac],
 
 				Urgent: urgent,
 			})
 		}
 	}
-	x = append(x, Model{
-		AC:    "A332",
-		AL:    "NWS",
-		Terms: []string{"Nordland"},
-	})
 
 	sort.Slice(x, func(i, j int) bool {
 		switch {
