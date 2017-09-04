@@ -5,6 +5,8 @@ import (
 	"bytes"
 	"crypto/aes"
 	"crypto/cipher"
+	"crypto/sha1"
+	"encoding/hex"
 	"errors"
 	"flag"
 	"fmt"
@@ -14,11 +16,9 @@ import (
 	"net/http"
 	"net/url"
 	"os"
-	"path"
 	"path/filepath"
 	"regexp"
 	"sort"
-	"strconv"
 	"strings"
 
 	"golang.org/x/net/html"
@@ -26,7 +26,13 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+var FSXRoot = "/mnt/c/Program Files (x86)/Steam/steamapps/common/FSX"
+
 func main() {
+	if d := os.Getenv("FSX_ROOT"); d != "" {
+		FSXRoot = d
+	}
+
 	flag.Parse()
 	term := ".*"
 	if args := flag.Args(); len(args) > 0 {
@@ -248,42 +254,62 @@ func installPackage(raw []byte, dlID string) error {
 		return fmt.Errorf("Cannot read %s.woai.enc: %v\n", dlID, err)
 	}
 
+	hash := sha1.New()
+	hash.Write(raw)
+	digest := hex.EncodeToString(hash.Sum(nil))
+	created := make(map[string]bool) // set of already created directories, so we can skip MkdirAll.
+
 	for _, zf := range z.File {
 		name := filepath.Clean(strings.Replace(zf.Name, `\`, "/", -1))
-		if ok, err := filepath.Match("aircraft/*/Aircraft.cfg", name); err != nil {
-			log.Fatal(err)
-		} else if !ok {
+		iname := strings.ToLower(name)
+		dest := name
+
+		switch {
+		case strings.HasPrefix(iname, "aircraft/"):
+			// Change dest such that we can write to FSXRoot/dest.
+			//
+			// dest is something like "aircraft/WoA_AIA_B733v2_Winglet/Aircraft.cfg".
+			// Replace the first segment with "SimObjects/Airplanes" and prepend
+			// part of the ZIP hash to the second segment (they are not unique
+			// across packages).
+			dest = strings.TrimPrefix(dest, "aircraft/")
+			dest = digest[:8] + "-" + dest
+			dest = filepath.Join("SimObjects/Airplanes", dest)
+
+		case strings.HasPrefix(iname, "texture/"),
+			strings.HasPrefix(iname, "scenery/"),
+			strings.HasPrefix(iname, "effects/"):
+			// Not sure if there are collisions here, but it probably doesn't
+			// matter much if there are.
+
+		case strings.HasSuffix(iname, ".txt"),
+			strings.HasPrefix(iname, "addon scenery/"),
+			iname == "avsim.diz",
+			iname == "woai.cfg",
+			iname == "version.ini":
+			// ignore
+			continue
+		default:
+			log.Println("skipping ", name)
 			continue
 		}
+
+		if strings.HasSuffix(dest, "Aircraft.cfg") {
+			dest = strings.TrimSuffix(dest, "Aircraft.cfg") + "aircraft.cfg"
+		}
+		fname := filepath.Join(FSXRoot, dest)
 
 		r, err := zf.Open()
 		if err != nil {
 			return fmt.Errorf("Cannot open %s.woai.enc/%s: %v\n", dlID, name, err)
 		}
 
-		var segments []string
-		for {
-			x := path.Base(name)
-			segments = append([]string{x}, segments...)
-			if x == name {
-				break
+		dir := filepath.Dir(fname)
+		if !created[dir] {
+			if err := os.MkdirAll(filepath.Dir(fname), 0755); err != nil {
+				return err
 			}
-			name = name[:len(name)-len(x)-1]
-		}
-		dir := segments[1]
-		for i := 0; ; i++ {
-			// add _<i> to name's second segment
-			segments[1] = dir + "_" + strconv.Itoa(i)
-			_, err := os.Stat(filepath.Join("woai", segments[0], segments[1]))
-			if os.IsNotExist(err) {
-				break
-			}
-		}
-
-		fname := filepath.Join(append([]string{"woai"}, segments...)...)
-
-		if err := os.MkdirAll(filepath.Dir(fname), 0755); err != nil {
-			return err
+			created[dir] = true
 		}
 
 		f, err := os.Create(fname)
