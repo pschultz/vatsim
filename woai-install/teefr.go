@@ -18,7 +18,9 @@ type teeFileReader struct {
 // error. The file is truncated before the first write and removed if an error
 // occurs.
 func TeeFileReader(r io.ReadCloser, fname string) (io.ReadCloser, error) {
-	os.MkdirAll(filepath.Dir(fname), 0755)
+	if err := os.MkdirAll(filepath.Dir(fname), 0755); err != nil {
+		return nil, err
+	}
 
 	f, err := os.Create(fname)
 	if err != nil {

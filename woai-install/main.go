@@ -133,6 +133,14 @@ func parse(req *http.Request) (*goquery.Document, error) {
 
 func fetch(req *http.Request) (io.ReadCloser, error) {
 	fname := filepath.Join(".cache", req.Method, req.URL.String())
+	fname = strings.Map(func(r rune) rune {
+		switch r {
+		case ':', '?':
+			return '_'
+		default:
+			return r
+		}
+	}, fname)
 	f, err := os.Open(fname)
 	if err == nil {
 		return f, nil
