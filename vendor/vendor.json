@@ -15,12 +15,6 @@
 			"revisionTime": "2016-12-24T14:14:13Z"
 		},
 		{
-			"checksumSHA1": "s3nVZF+PntuosFTcGqS+K9YtRPU=",
-			"path": "github.com/claudetech/ini",
-			"revision": "73e6100d9d518ebaf96bf607a7d4235ba9ad0cd8",
-			"revisionTime": "2014-09-10T07:24:10Z"
-		},
-		{
 			"checksumSHA1": "EHjhpHipgm+XGccrRAms9AW3Ewk=",
 			"path": "github.com/mitchellh/mapstructure",
 			"revision": "d0303fe809921458f417bcf828397a65db30a7e4",
