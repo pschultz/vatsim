@@ -34,10 +34,12 @@ func main() {
 	}
 
 	flag.Parse()
-	term := ".*"
-	if args := flag.Args(); len(args) > 0 {
-		term = args[0]
+	args := flag.Args()
+	if len(args) != 1 {
+		fmt.Fprintf(os.Stderr, "Usage: %s PATTERN\n", filepath.Base(os.Args[0]))
+		os.Exit(1)
 	}
+	term := args[0]
 
 	nodes, doc, err := search(term)
 	if err != nil {
@@ -323,7 +325,9 @@ func installPackage(raw []byte, dlID string) error {
 		if err != nil {
 			return fmt.Errorf("Cannot extract %s: %v\n", name, err)
 		}
-		fmt.Println("\t", fname)
+		if strings.HasSuffix(strings.ToLower(fname), "aircraft.cfg") {
+			fmt.Println("\t", fname)
+		}
 	}
 
 	return nil
