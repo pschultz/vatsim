@@ -1,6 +1,7 @@
 package main
 
 import (
+	"compress/gzip"
 	"encoding/json"
 	"encoding/xml"
 	"errors"
@@ -13,9 +14,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
 	"time"
-
-	"github.com/blevesearch/bleve"
 )
 
 var FSXRoot = "/mnt/c/Program Files (x86)/Steam/steamapps/common/FSX"
@@ -27,6 +27,8 @@ func main() {
 
 	watch := flag.Bool("watch", false, "Monitor the vatsim API and update the ruleset when never-seen-before aircraft appear.")
 	flag.Parse()
+
+	// for each model in the database, look
 
 	db := &Database{} // maps Airline codes to sets of aircraft codes
 	if f, err := os.Open("icao.json"); err != nil {
@@ -50,15 +52,39 @@ func main() {
 		f.Close()
 	}
 
+	if f, err := os.Open("model-matcher/ModelMatchingData.xml.gz"); err != nil {
+		log.Fatal(err)
+	} else {
+		r, err := gzip.NewReader(f)
+		if err != nil {
+			log.Fatal(err)
+		}
+		db.ReadVPilotModelData(r)
+		r.Close()
+		f.Close()
+	}
+
 	// TODO: Figure out which charset works for the txt files. It's something
 	// exotic. See for instance db.EuroScopeICAO["LAU"][0]. That's supposed to be
 	// "Líneas Aéreas Suramericanas - Colombia"
 	//fmt.Println(db.EuroScopeICAO["LAU"][0], []byte(db.EuroScopeICAO["LAU"][0][:8]))
 
-	index, err := CreateIndex()
-	if err != nil {
-		log.Fatal(err)
-	}
+	index := make(map[string]map[string][]string) // Airline to Aircraft to Titles
+	/*
+		index, err := CreateIndex()
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+
+	wg := sync.WaitGroup{}
+	wg.Add(1)
+	go func() {
+		if err := updateDB(db); err != nil {
+			log.Println(err)
+		}
+		wg.Done()
+	}()
 
 	paths, err := filepath.Glob(filepath.Join(FSXRoot, "SimObjects/Airplanes/*/aircraft.cfg"))
 	if err != nil {
@@ -66,34 +92,22 @@ func main() {
 	}
 
 	for _, path := range paths {
-		cfg, err := AircraftConfig(path)
+		models, err := AircraftConfig(path)
 		if err != nil {
 			log.Println(path, err)
 			continue
 		}
-		for id, doc := range cfg {
-			if err := Index(index, "woai", id, doc); err != nil {
-				log.Fatal(path, err)
+		for _, m := range models {
+			if index[m.AirlineName] == nil {
+				index[m.AirlineName] = make(map[string][]string)
 			}
+			index[m.AirlineName][m.Model] = append(index[m.AirlineName][m.Model], m.Title)
 		}
 	}
 
-	//DumpAll(index)
-	//os.Exit(0)
-
-	if err := updateDB(db); err != nil {
+	wg.Wait()
+	if err := saveMappings(index, db); err != nil {
 		log.Println(err)
-	}
-	rs, err := buildMapping(index, db)
-	if err != nil {
-		log.Println(err)
-	}
-
-	if b, err := xml.MarshalIndent(rs, "", "  "); err != nil {
-		log.Println(err)
-	} else {
-		fmt.Print(xml.Header)
-		fmt.Println(string(b))
 	}
 
 	if !*watch {
@@ -105,25 +119,14 @@ func main() {
 			log.Println(err)
 			continue
 		}
-		rs, err = buildMapping(index, db)
-		if err != nil {
+		if err := saveMappings(index, db); err != nil {
 			log.Println(err)
-			continue
 		}
-
-		b, err := xml.MarshalIndent(rs, "", "  ")
-		if err != nil {
-			log.Println(err)
-			continue
-		}
-
-		fmt.Print(xml.Header)
-		fmt.Println(string(b))
 	}
 }
 
 func updateDB(db *Database) error {
-	res, err := http.Get("http://api.vateud.net/online/pilots/e.json")
+	res, err := http.Get("http://api.vateud.net/online/pilots/ed.json")
 	if err != nil {
 		return err
 	}
@@ -161,73 +164,73 @@ type Rule struct {
 	Substitute bool     `xml:"Substitute,attr,omitempty"`
 }
 
-func buildMapping(index bleve.Index, db *Database) (*RuleSet, error) {
-	rs := &RuleSet{}
+func saveMappings(index map[string]map[string][]string, db *Database) error {
+	rss := buildMapping2(index, db)
 
-	for _, ac := range db.All() {
-		switch ac.AL {
-		case "DLH": //, "QTR", "BAW":
-		default:
-			continue
-		}
-
-		titles, err := Search(index, ac)
+	for airline, rs := range rss {
+		b, err := xml.MarshalIndent(rs, "", "  ")
 		if err != nil {
-			return nil, err
+			log.Fatal(err)
 		}
 
-		if len(titles) == 0 {
-			log.Printf("No match: %s %s %#v\n", ac.AL, ac.AC, ac.Terms)
-			continue
+		fname := filepath.Join("vPilot Files/Model Matching Rule Sets", airline+".vrm")
+		if err := ioutil.WriteFile(fname, append([]byte(xml.Header), b...), 0644); err != nil {
+			return err
 		}
-
-		substitute := false
-		if substitute {
-			titles = titles[:1]
-		}
-		rs.Rules = append(rs.Rules, Rule{
-			AL:         ac.AL,
-			AC:         ac.AC,
-			Model:      strings.Join(titles, "//"),
-			Substitute: substitute,
-		})
 	}
 
-	return rs, nil
+	return nil
 }
 
-func search(index bleve.Index, ac Model) ([]string, bool, error) {
-	titles, err := Search(index, ac)
-	if err != nil {
-		return nil, false, err
-	}
+func buildMapping2(index map[string]map[string][]string, db *Database) map[string]*RuleSet {
+	rss := make(map[string]*RuleSet)
 
-	if len(titles) > 0 {
-		return titles, false, err
-	}
-
-	if len(ac.AC) == 4 {
-		switch ac.AC[:3] {
-		case "B73", "B74", "B75", "B77", "B78":
-			ac.AC = ac.AC[:3]
-			title, _, err := search(index, ac)
-			return title, true, err
+	for al, acs := range db.All() {
+		alName := db.AirlineNames[al]
+		if alName == "" {
+			log.Printf("No name for %s\n", al)
+			continue
 		}
+
+		if len(index[alName]) == 0 {
+			log.Printf("No models for %s %s; want %+v\n", al, alName, acs)
+			continue
+		}
+
+		rs := &RuleSet{}
+		rss[alName] = rs
+
+		for ac, urgent := range acs {
+			candidates := []string{ac}
+			for _, alts := range db.AircraftAlts {
+				if !alts[ac] {
+					continue
+				}
+				for alt := range alts {
+					candidates = append(candidates, alt)
+				}
+			}
+
+			for i, c := range candidates {
+				if titles := index[alName][c]; len(titles) > 0 {
+					rs.Rules = append(rs.Rules, Rule{
+						AL:         al,
+						AC:         ac,
+						Model:      strings.Join(titles, "//"),
+						Substitute: i > 0,
+					})
+					goto next_model
+				}
+			}
+			if urgent {
+				log.Printf("No match: %s %s %s\n", al, alName, ac)
+			}
+		next_model:
+		}
+
 	}
 
-	switch ac.AC {
-	case "B73":
-		ac.AC = "B75"
-	case "B75":
-		ac.AC = "B77"
-	case "B77":
-		ac.AC = "B78"
-	default:
-		return titles, false, nil
-	}
-
-	title, _, err := search(index, ac)
-	return title, true, err
+	return rss
 }
 
 func dump(y interface{}) {

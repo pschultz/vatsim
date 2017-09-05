@@ -5736,7 +5736,7 @@ TTX	Extraordin Air Aviation and Charter - US	TWISTER
 TUA	Turkmenhovayollary - Turkmenistan	TURKMENISTAN
 TUC	Turismo Aereo de Chile - Chile	TURICHILE
 TUD	Flight Alaska - United States	TUNDRA
-TUI	Tuninter - Tunisia	UNKNOWN
+TUI	TUIFly - Germany	TUIJET
 TUK	Ocean Wings Commuter Service - United States	TUCKERNUCK
 TUL	Tulpar Air - Russia	URSAL
 TUM	Tyumenspecavia - Russia	TUMTEL

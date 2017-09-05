@@ -125,6 +125,7 @@ func TestParseAircraft(t *testing.T) {
 		{"M/A320/E", "A320"},
 		{"M/A321/L", "A321"},
 		{"MD82/F", "MD82"},
+		{"M/CRJ2/Q", "CRJ2"},
 	}
 
 	for _, tc := range cases {

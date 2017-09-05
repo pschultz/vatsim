@@ -12,7 +12,17 @@ import (
 
 type Config map[string]map[string]string
 
-func AircraftConfig(filename string) (Config, error) {
+type InstalledModel struct {
+	AirlineName string
+	Model       string
+	Title       string
+}
+
+var airlineFixes = map[string]string{
+	"SPEED BIRD": "SPEEDBIRD",
+}
+
+func AircraftConfig(filename string) ([]InstalledModel, error) {
 	// config file reference: https://msdn.microsoft.com/en-us/library/cc526949.aspx
 
 	id := filepath.Base(filepath.Dir(filename))
@@ -30,26 +40,41 @@ func AircraftConfig(filename string) (Config, error) {
 		return nil, fmt.Errorf("Parse %s: %v", filename, err)
 	}
 
-	cfg := make(Config)
 	atcModel := variants["general"]["atc_model"]
+	if atcModel == "" {
+		fmt.Println("Empty atc_model: ", filename)
+		return nil, nil
+	}
+
+	var models []InstalledModel
 
 	for n, section := range variants {
 		if !strings.HasPrefix(n, "fltsim.") {
 			continue
 		}
-		delete(section, "model")
-		delete(section, "atc_parking_codes")
-		delete(section, "atc_parking_types")
-		delete(section, "ui_manufacturer")
-		delete(section, "atc_heavy")
-		if atcModel != "" {
-			section["atc_model"] = atcModel
+
+		m := InstalledModel{
+			Title:       section["title"],
+			AirlineName: section["atc_airline"],
+			Model:       atcModel,
 		}
 
-		cfg[id+"_"+n[7:]] = section
+		if fix := airlineFixes[m.AirlineName]; fix != "" {
+			m.AirlineName = fix
+		}
+
+		switch {
+		case m.Title == "":
+			fmt.Println("Empty title: ", filename)
+		case m.AirlineName == "":
+			// Happens all the time for stock models
+			// fmt.Println("Empty atc_airline: ", filename)
+		default:
+			models = append(models, m)
+		}
 	}
 
-	return cfg, nil
+	return models, nil
 }
 
 func ParseIni(r io.Reader) (Config, error) {

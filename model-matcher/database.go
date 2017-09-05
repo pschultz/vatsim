@@ -3,29 +3,20 @@ package main
 import (
 	"bufio"
 	"encoding/json"
+	"encoding/xml"
 	"io"
 	"regexp"
-	"sort"
 	"strings"
 )
 
 type Database struct {
-	models        map[string]map[string]bool
-	euroScopeICAO map[string][]string
-}
-
-type Model struct {
-	AC        string // Aircraft ICAO
-	AL        string // Airline ICAO
-	ALKeyword string
-
-	Terms []string // Terms for fulltext search
-
-	Urgent bool // To or from EDDT
+	Wanted       map[string]map[string]bool // Airline to Aircraft to Urgent
+	AirlineNames map[string]string
+	AircraftAlts []map[string]bool
 }
 
 func (d *Database) UnmarshalJSON(b []byte) error {
-	d.models = make(map[string]map[string]bool)
+	d.Wanted = make(map[string]map[string]bool)
 
 	x := make(map[string][]string)
 	if err := json.Unmarshal(b, &x); err != nil {
@@ -42,8 +33,8 @@ func (d *Database) UnmarshalJSON(b []byte) error {
 }
 
 func (d *Database) MarshalJSON() ([]byte, error) {
-	x := make(map[string][]string, len(d.models))
-	for al, acs := range d.models {
+	x := make(map[string][]string, len(d.Wanted))
+	for al, acs := range d.Wanted {
 		for ac := range acs {
 			x[al] = append(x[al], ac)
 		}
@@ -51,9 +42,39 @@ func (d *Database) MarshalJSON() ([]byte, error) {
 	return json.Marshal(x)
 }
 
+func (d *Database) ReadVPilotModelData(r io.Reader) error {
+	d.AircraftAlts = make([]map[string]bool, 0, 60)
+	var m struct {
+		XMLName          xml.Name `xml:"ModelMatchingData"`
+		SimilarTypeCodes struct {
+			String []string `xml:"string"`
+		}
+	}
+
+	if err := xml.NewDecoder(r).Decode(&m); err != nil {
+		return err
+	}
+
+	for _, s := range m.SimilarTypeCodes.String {
+		codes := strings.Fields(s)
+		if len(codes) < 2 {
+			continue
+		}
+		set := make(map[string]bool, len(codes))
+		for _, x := range codes {
+			if x == "CRJ2" {
+				set["CRJ200"] = true
+			}
+			set[x] = true
+		}
+		d.AircraftAlts = append(d.AircraftAlts, set)
+	}
+	return nil
+}
+
 func (d *Database) ReadEuroScopeICAO(r io.Reader) error {
-	if d.euroScopeICAO == nil {
-		d.euroScopeICAO = make(map[string][]string)
+	if d.AirlineNames == nil {
+		d.AirlineNames = make(map[string]string, 10e3)
 	}
 
 	scanner := bufio.NewScanner(r)
@@ -61,12 +82,10 @@ func (d *Database) ReadEuroScopeICAO(r io.Reader) error {
 		line := scanner.Text()
 		fields := strings.Split(line, "\t")
 		switch len(fields) {
-		case 4:
-			// Aircraft. Not sure what the second column is; ignore.
-			d.euroScopeICAO[fields[0]] = fields[2:]
 		case 3:
-			// Airline. Grab only the keyword.
-			d.euroScopeICAO[fields[0]] = fields[2:]
+			d.AirlineNames[fields[0]] = fields[2]
+		default:
+			// Probably not an ICAO_Airlines file
 		}
 	}
 
@@ -92,57 +111,38 @@ func (d *Database) Add(x APIStation) {
 	}
 
 	switch {
-	case d.models[airline] == nil:
-		d.models[airline] = make(map[string]bool)
-	case d.models[airline][x.Aircraft]:
+	case d.Wanted == nil:
+		d.Wanted = make(map[string]map[string]bool)
+		fallthrough
+	case d.Wanted[airline] == nil:
+		d.Wanted[airline] = make(map[string]bool)
+	case d.Wanted[airline][x.Aircraft]:
 		// already present and Urgent
 		return
 	}
 
 	urgent := x.Origin == "EDDT" || x.Destination == "EDDT"
-	d.models[airline][x.Aircraft] = urgent
+	d.Wanted[airline][x.Aircraft] = urgent
 }
 
-func (d *Database) All() []Model {
-	x := make([]Model, 0, len(d.models))
-	for al, acs := range d.models {
+func (d *Database) All() map[string]map[string]bool {
+	x := make(map[string]map[string]bool, len(d.Wanted))
+
+	for al, acs := range d.Wanted {
+		x[al] = make(map[string]bool, len(acs))
 		seen := make(map[string]bool, len(acs))
 		for ac, urgent := range acs {
 			ac = parseAircraft(ac)
-			if ac == "" || seen[ac] {
-				continue
+			switch {
+			case ac == "":
+			case seen[ac]:
+			default:
+				seen[ac] = true
+				x[al][ac] = urgent
 			}
-			seen[ac] = true
-			keywords := d.euroScopeICAO[al]
-			if len(keywords) == 0 {
-				continue
-			}
-
-			x = append(x, Model{
-				AC:        ac,
-				AL:        al,
-				ALKeyword: keywords[0],
-				Terms:     d.euroScopeICAO[ac],
-
-				Urgent: urgent,
-			})
 		}
 	}
 
-	sort.Slice(x, func(i, j int) bool {
-		switch {
-		case x[i].AL < x[j].AL:
-			return true
-		case x[i].AL > x[j].AL:
-			return false
-		case x[i].AC < x[j].AC:
-			return true
-		case x[i].AC > x[j].AC:
-			return false
-		default:
-			return false
-		}
-	})
 	return x
 }
 
