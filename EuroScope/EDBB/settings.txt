@@ -44,7 +44,7 @@ SET_TransparentAcListBackground:1
 m_PutIncomingCoordinationToFirst:0
 m_AutoProxyMode:0
 m_TransparentAcListSelectedBackground:0
-m_TransparentDetailedTagBackground:1
+m_TransparentDetailedTagBackground:0
 m_TransparentDetailedTagSelectedItemBackground:0
 m_AllowDirectBeyondCOPX:0
 m_ShowAtisLetterInMETAR:1
@@ -101,7 +101,7 @@ m_ShowCorrelatedInFpList:1
 m_ShowUncorrelatedInFpList:1
 m_ShowVFRInFpList:1
 m_ShowIFRInFpList:1
-m_ShowConcernedInFpList:0
+m_ShowConcernedInFpList:1
 m_ShowUnconcernedInFpList:0
 m_ZoomCenterUnderMouse:0
 m_AseURL:http://www.craig-phillips.co.uk/ase/repository/
@@ -124,7 +124,7 @@ m_RotateRadarTargetSymbol:0
 m_RotateFlightPlanTrackSymbol:0
 m_ShowControllers:1
 m_ShowAircraft:0
-m_ShowTextMessages:1
+m_ShowTextMessages:0
 m_ShowTitle:1
 m_ShowTitleFileName:1
 m_ShowTitleController:1
@@ -201,8 +201,8 @@ NDBs:frequency:8421504:3.5:0:0:0
 Runways:centerline:8421504:3.5:0:0:7
 Runways:extended centerline:8421504:3.5:0:0:7
 Runways:name:255:4.0:1:0:0
-Datablock:non concerned:9671571:3.3:0:0:7
-Datablock:notified:13816530:3.3:0:0:7
+Datablock:non concerned:4259584:3.3:0:0:7
+Datablock:notified:8454016:3.3:0:0:7
 Datablock:assumed:16777017:3.3:0:0:7
 Datablock:transfer to me initiated:16777017:3.3:0:0:7
 Datablock:redundant:5938156:3.3:0:0:7
@@ -1292,8 +1292,12 @@ TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:19::0:1:29:0::0:1:::1
 TAGTYPE:3:0:0
 TAGITEM:39::1:0:0:0::0:1:::0
+TAGITEM:0::0:0:0:0::0:1:::1
+TAGITEM:17::0:0:0:0::0:1:::1
 TAGTYPE:4:0:0
 TAGITEM:9::1:0:0:0::0:1:::0
+TAGITEM:0::0:0:0:0::0:1:::1
+TAGITEM:17::0:0:0:0::0:1:::1
 TAGTYPE:5:7:1
 TAGITEM:5::0:0:0:0::0:1:::1
 TAGITEM:6::0:1:0:0::0:1:::1
@@ -1313,6 +1317,8 @@ TAGITEM:81::1:0:0:0::0:1:::0
 TAGITEM:16::0:1:0:0::0:1:::1
 TAGTYPE:8:0:0
 TAGITEM:39::1:0:0:0::0:1:::0
+TAGITEM:0::0:0:0:0::0:1:::1
+TAGITEM:17::0:0:0:0::0:1:::1
 TAGTYPE:9:0:0
 TAGITEM:39::1:0:0:0::0:1:::0
 TAGITEM:0::0:0:0:0::0:1:::1
@@ -1476,11 +1482,11 @@ m_Column:SI:3:1:64:20:0:1::::1
 END
 DEP
 m_Visible:1
-m_X:268
-m_Y:36
-m_LineNumber:6
+m_X:0
+m_Y:24
+m_LineNumber:0
 m_Resizable:1
-m_OrderingColumn:1
+m_OrderingColumn:2
 m_HeaderOnly:0
 m_Column:DSQ:3:1:57:0:0:1::::1
 m_Column:C/S:7:0:9:0:0:1::::0
@@ -1498,9 +1504,9 @@ m_Column:™:1:1:62:0:0:1::::1
 m_Column:STS:4:1:59:28:28:1::::1
 END
 ARR
-m_Visible:0
-m_X:723
-m_Y:35
+m_Visible:1
+m_X:417
+m_Y:31
 m_LineNumber:0
 m_Resizable:1
 m_OrderingColumn:-1
