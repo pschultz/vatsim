@@ -1,13 +1,7 @@
 package main
 
 import (
-	"archive/zip"
 	"bytes"
-	"crypto/aes"
-	"crypto/cipher"
-	"crypto/sha1"
-	"encoding/hex"
-	"errors"
 	"flag"
 	"fmt"
 	"io"
@@ -21,16 +15,38 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/PuerkitoBio/goquery"
+	"github.com/mitchellh/cli"
 	"golang.org/x/net/html"
 
-	"github.com/PuerkitoBio/goquery"
+	"github.com/pschultz/vatsim/fsx"
+	"github.com/pschultz/vatsim/woai"
 )
 
 var FSXRoot = "/mnt/c/Program Files (x86)/Steam/steamapps/common/FSX"
 
+func prefix(ui cli.Ui, format string, args ...interface{}) *cli.PrefixedUi {
+	prefix := fmt.Sprintf(format, args...)
+	return &cli.PrefixedUi{
+		AskPrefix:       prefix,
+		AskSecretPrefix: prefix,
+		OutputPrefix:    prefix,
+		InfoPrefix:      prefix,
+		ErrorPrefix:     prefix + "Error: ",
+		WarnPrefix:      prefix + "Warning: ",
+		Ui:              ui,
+	}
+}
+
 func main() {
 	if d := os.Getenv("FSX_ROOT"); d != "" {
 		FSXRoot = d
+	}
+
+	rootUI := &cli.BasicUi{
+		Reader:      os.Stdin,
+		Writer:      os.Stdout,
+		ErrorWriter: os.Stderr,
 	}
 
 	flag.Parse()
@@ -52,20 +68,31 @@ func main() {
 	}
 	sort.Strings(titles)
 
+	installer := fsx.NewInstaller(FSXRoot)
+
 	for _, title := range titles {
-		fmt.Println(title)
+		ui := prefix(rootUI, "%s: ", title)
+		ui.Output("Downloading")
 		for _, n := range nodes[title] {
 			b, dlID, err := downloadPackage(href(doc, n))
 			if err != nil {
-				fmt.Println("\t", err)
+				ui.Error(err.Error())
 				continue
 			}
 
-			if err := installPackage(b, dlID); err != nil {
-				fmt.Println("\t", err)
+			ui := prefix(rootUI, "%s (%s): ", title, dlID)
+
+			p, err := woai.NewPackage(bytes.NewReader(b))
+			if err != nil {
+				ui.Error(err.Error())
 				continue
 			}
-			break
+
+			ui.Output("Installing")
+			if err := installer.Install(ui, p); err != nil {
+				ui.Error(err.Error())
+				continue
+			}
 		}
 	}
 }
@@ -95,7 +122,7 @@ func search(pattern string) (map[string][]*html.Node, *goquery.Document, error) 
 
 func dlPageAnchors(nodes map[string][]*html.Node, re *regexp.Regexp, table *goquery.Selection) {
 	table.Find("tr").Each(func(_ int, s *goquery.Selection) {
-		title := s.Find("td").Eq(1).Text()
+		title := strings.TrimSpace(s.Find("td").Eq(1).Text())
 		if !re.MatchString(title) {
 			return
 		}
@@ -153,7 +180,6 @@ func fetch(req *http.Request) (io.ReadCloser, error) {
 	if err == nil {
 		return f, nil
 	}
-	log.Println("cache miss ", req.URL.String())
 
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {
@@ -174,22 +200,22 @@ func downloadPackage(dlPageURL string) (b []byte, dlID string, err error) {
 
 	doc, err := parse(req)
 	if err != nil {
-		return nil, "", fmt.Errorf("Fetch download page: %v", err)
+		return nil, "", fmt.Errorf("fetch download page: %v", err)
 	}
 
 	nodes := doc.Find("a[href^='download.php?DLID=']").First().Nodes
 	if len(nodes) < 1 {
-		return nil, "", fmt.Errorf("Interstitial link not found: %v", dlPageURL)
+		return nil, "", fmt.Errorf("interstitial link not found: %v", dlPageURL)
 	}
 
 	interstitialURL, err := url.Parse(href(doc, nodes[0]))
 	if err != nil {
-		return nil, "", fmt.Errorf("Cannot parse interstitial URL: %v", err)
+		return nil, "", fmt.Errorf("cannot parse interstitial URL: %v", err)
 	}
 
 	dlID = interstitialURL.Query().Get("DLID")
 	if dlID == "" {
-		return nil, "", fmt.Errorf("Empty DLID in interstitial URL: %v", interstitialURL)
+		return nil, "", fmt.Errorf("empty DLID in interstitial URL: %v", interstitialURL)
 	}
 
 	dlQuery := make(url.Values)
@@ -212,164 +238,14 @@ func downloadPackage(dlPageURL string) (b []byte, dlID string, err error) {
 
 	r, err := fetch(req)
 	if err != nil {
-		return nil, "", fmt.Errorf("Cannot download %s: %v\n", dlQuery.Encode(), err)
+		return nil, "", fmt.Errorf("cannot download %s: %v", req.URL.String(), err)
 	}
 	defer r.Close()
 
 	b, err = ioutil.ReadAll(r)
 	if err != nil {
-		return nil, "", fmt.Errorf("Cannot read %s: %v\n", dlID, err)
+		return nil, "", fmt.Errorf("read response: %v", err)
 	}
 
 	return b, dlID, nil
-}
-
-// installPackage installs a single World of AI Package. raw are the bytes of
-// the outermost zip archive, as returned by downloadPackage.
-func installPackage(raw []byte, dlID string) error {
-	z, err := zip.NewReader(bytes.NewReader(raw), int64(len(raw)))
-	if err != nil {
-		return fmt.Errorf("Cannot read zip %s: %v\n", dlID, err)
-	}
-
-	raw, err = unzip(z, ".woai.zip")
-	if err != nil {
-		return err
-	}
-
-	z, err = zip.NewReader(bytes.NewReader(raw), int64(len(raw)))
-	if err != nil {
-		return fmt.Errorf("Cannot read %s.woai.zip: %v\n", dlID, err)
-	}
-
-	raw, err = unzip(z, ".woai.enc")
-	if err != nil {
-		return err
-	}
-
-	if err := decrypt(raw); err != nil {
-		log.Fatal(err) // should never happen
-	}
-
-	z, err = zip.NewReader(bytes.NewReader(raw), int64(len(raw)))
-	if err != nil {
-		return fmt.Errorf("Cannot read %s.woai.enc: %v\n", dlID, err)
-	}
-
-	hash := sha1.New()
-	hash.Write(raw)
-	digest := hex.EncodeToString(hash.Sum(nil))
-	created := make(map[string]bool) // set of already created directories, so we can skip MkdirAll.
-
-	for _, zf := range z.File {
-		name := filepath.Clean(strings.Replace(zf.Name, `\`, "/", -1))
-		iname := strings.ToLower(name)
-		dest := name
-
-		switch {
-		case strings.HasPrefix(iname, "aircraft/"):
-			// Change dest such that we can write to FSXRoot/dest.
-			//
-			// dest is something like "aircraft/WoA_AIA_B733v2_Winglet/Aircraft.cfg".
-			// Replace the first segment with "SimObjects/Airplanes" and prepend
-			// part of the ZIP hash to the second segment (they are not unique
-			// across packages).
-			dest = strings.TrimPrefix(dest, "aircraft/")
-			dest = digest[:8] + "-" + dest
-			dest = filepath.Join("SimObjects/Airplanes", dest)
-
-		case strings.HasPrefix(iname, "texture/"),
-			strings.HasPrefix(iname, "scenery/"),
-			strings.HasPrefix(iname, "effects/"):
-			// Not sure if there are collisions here, but it probably doesn't
-			// matter much if there are.
-
-		case strings.HasSuffix(iname, ".txt"),
-			strings.HasPrefix(iname, "addon scenery/"),
-			iname == "avsim.diz",
-			iname == "woai.cfg",
-			iname == "version.ini":
-			// ignore
-			continue
-		default:
-			log.Println("skipping ", name)
-			continue
-		}
-
-		if strings.HasSuffix(dest, "Aircraft.cfg") {
-			dest = strings.TrimSuffix(dest, "Aircraft.cfg") + "aircraft.cfg"
-		}
-		fname := filepath.Join(FSXRoot, dest)
-
-		r, err := zf.Open()
-		if err != nil {
-			return fmt.Errorf("Cannot open %s.woai.enc/%s: %v\n", dlID, name, err)
-		}
-
-		dir := filepath.Dir(fname)
-		if !created[dir] {
-			if err := os.MkdirAll(filepath.Dir(fname), 0755); err != nil {
-				return err
-			}
-			created[dir] = true
-		}
-
-		f, err := os.Create(fname)
-		if err != nil {
-			r.Close()
-			return fmt.Errorf("Cannot create %s: %v\n", fname, err)
-		}
-		_, err = io.Copy(f, r)
-		r.Close()
-		f.Close()
-		if err != nil {
-			return fmt.Errorf("Cannot extract %s: %v\n", name, err)
-		}
-		if strings.HasSuffix(strings.ToLower(fname), "aircraft.cfg") {
-			fmt.Println("\t", fname)
-		}
-	}
-
-	return nil
-}
-
-func unzip(z *zip.Reader, fnameSuffix string) ([]byte, error) {
-	for _, f := range z.File {
-		if !strings.HasSuffix(f.Name, fnameSuffix) {
-			continue
-		}
-
-		r, err := f.Open()
-		if err != nil {
-			return nil, err
-		}
-		defer r.Close()
-
-		return ioutil.ReadAll(r)
-	}
-
-	return nil, errors.New("zip: not found: " + fnameSuffix)
-}
-
-func decrypt(b []byte) error {
-	key := []byte{
-		0xf8, 0x93, 0xab, 0xdd, 0xf3, 0x9b, 0x02, 0x6d,
-		0x5d, 0x13, 0x5a, 0x61, 0xfe, 0xcb, 0x91, 0x0f,
-		0xe0, 0x69, 0x0a, 0x47, 0xe7, 0xd5, 0x91, 0x83,
-		0x9d, 0xdf, 0xc9, 0x70, 0x03, 0x05, 0x3c, 0x5c,
-	}
-	iv := []byte{
-		0x27, 0xc9, 0x1e, 0x10, 0x6f, 0x27, 0x9e, 0xd0,
-		0x4d, 0x64, 0xd4, 0x19, 0xcb, 0x74, 0x19, 0xb0,
-	}
-
-	block, err := aes.NewCipher(key)
-	if err != nil {
-		return err
-	}
-
-	dec := cipher.NewCBCDecrypter(block, iv)
-	dec.CryptBlocks(b, b)
-
-	return nil
 }
