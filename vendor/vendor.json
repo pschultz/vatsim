@@ -15,10 +15,70 @@
 			"revisionTime": "2016-12-24T14:14:13Z"
 		},
 		{
+			"checksumSHA1": "GCTVJ1J/SGZstNZauuLAnTFOhGA=",
+			"path": "github.com/armon/go-radix",
+			"revision": "1fca145dffbcaa8fe914309b1ec0cfc67500fe61",
+			"revisionTime": "2017-07-27T15:54:43Z"
+		},
+		{
+			"checksumSHA1": "oTmBS67uxM6OXB/+OJUAG9LK4jw=",
+			"path": "github.com/bgentry/speakeasy",
+			"revision": "4aabc24848ce5fd31929f7d1e4ea74d3709c14cd",
+			"revisionTime": "2017-04-17T20:07:03Z"
+		},
+		{
+			"checksumSHA1": "cdOCt0Yb+hdErz8NAQqayxPmRsY=",
+			"path": "github.com/hashicorp/errwrap",
+			"revision": "7554cd9344cec97297fa6649b055a8c98c2a1e55",
+			"revisionTime": "2014-10-28T05:47:10Z"
+		},
+		{
+			"checksumSHA1": "g7uHECbzuaWwdxvwoyxBwgeERPk=",
+			"path": "github.com/hashicorp/go-multierror",
+			"revision": "83588e72410abfbe4df460eeb6f30841ae47d4c4",
+			"revisionTime": "2017-06-22T06:09:55Z"
+		},
+		{
+			"checksumSHA1": "U6lX43KDDlNOn+Z0Yyww+ZzHfFo=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "fc9e8d8ef48496124e79ae0df75490096eccf6fe",
+			"revisionTime": "2017-03-22T23:44:13Z"
+		},
+		{
+			"checksumSHA1": "mjxSVrqngLZSyaQoEW2OLUb3oDs=",
+			"path": "github.com/mitchellh/cli",
+			"revision": "7a1a617034de956eee640dfa5a7407ccc8c8d7e6",
+			"revisionTime": "2017-09-06T23:20:06Z"
+		},
+		{
 			"checksumSHA1": "EHjhpHipgm+XGccrRAms9AW3Ewk=",
 			"path": "github.com/mitchellh/mapstructure",
 			"revision": "d0303fe809921458f417bcf828397a65db30a7e4",
 			"revisionTime": "2017-05-23T03:00:23Z"
+		},
+		{
+			"checksumSHA1": "rTNABfFJ9wtLQRH8uYNkEZGQOrY=",
+			"path": "github.com/posener/complete",
+			"revision": "9f41f7636a724791a3b8b1d35e84caa1124f0d3c",
+			"revisionTime": "2017-08-29T17:11:12Z"
+		},
+		{
+			"checksumSHA1": "NB7uVS0/BJDmNu68vPAlbrq4TME=",
+			"path": "github.com/posener/complete/cmd",
+			"revision": "9f41f7636a724791a3b8b1d35e84caa1124f0d3c",
+			"revisionTime": "2017-08-29T17:11:12Z"
+		},
+		{
+			"checksumSHA1": "gSX86Xl0w9hvtntdT8h23DZtSag=",
+			"path": "github.com/posener/complete/cmd/install",
+			"revision": "9f41f7636a724791a3b8b1d35e84caa1124f0d3c",
+			"revisionTime": "2017-08-29T17:11:12Z"
+		},
+		{
+			"checksumSHA1": "DMo94FwJAm9ZCYCiYdJU2+bh4no=",
+			"path": "github.com/posener/complete/match",
+			"revision": "9f41f7636a724791a3b8b1d35e84caa1124f0d3c",
+			"revisionTime": "2017-08-29T17:11:12Z"
 		},
 		{
 			"checksumSHA1": "vqc3a+oTUGX8PmD0TS+qQ7gmN8I=",
