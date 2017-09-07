@@ -27,7 +27,7 @@ func AircraftConfig(filename string) ([]InstalledModel, error) {
 
 	id := filepath.Base(filepath.Dir(filename))
 	if id == "" {
-		return nil, errors.New("Malformed filename: " + filename)
+		return nil, errors.New("malformed filename: " + filename)
 	}
 
 	f, err := os.Open(filename)
@@ -37,7 +37,7 @@ func AircraftConfig(filename string) ([]InstalledModel, error) {
 
 	variants, err := ParseIni(f)
 	if err != nil {
-		return nil, fmt.Errorf("Parse %s: %v", filename, err)
+		return nil, fmt.Errorf("parse %s: %v", filename, err)
 	}
 
 	atcModel := variants["general"]["atc_model"]
@@ -55,7 +55,7 @@ func AircraftConfig(filename string) ([]InstalledModel, error) {
 
 		m := InstalledModel{
 			Title:       section["title"],
-			AirlineName: section["atc_airline"],
+			AirlineName: strings.ToUpper(section["atc_airline"]),
 			Model:       atcModel,
 		}
 

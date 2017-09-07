@@ -90,8 +90,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	paths2, err := filepath.Glob(filepath.Join(FSXRoot, "SimObjects/Airplanes/*/Aircraft.cfg"))
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	for _, path := range paths {
+	for _, path := range append(paths, paths2...) {
 		models, err := AircraftConfig(path)
 		if err != nil {
 			log.Println(path, err)
@@ -173,7 +177,7 @@ func saveMappings(index map[string]map[string][]string, db *Database) error {
 			log.Fatal(err)
 		}
 
-		fname := filepath.Join("vPilot Files/Model Matching Rule Sets", airline+".vrm")
+		fname := filepath.Join("vPilot Files/Model Matching Rule Sets", airline+".vmr")
 		if err := ioutil.WriteFile(fname, append([]byte(xml.Header), b...), 0644); err != nil {
 			return err
 		}
