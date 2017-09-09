@@ -21,6 +21,7 @@ import (
 
 	"github.com/pschultz/vatsim/EuroScope"
 	"github.com/pschultz/vatsim/fsx"
+	"github.com/pschultz/vatsim/vPilot"
 	"github.com/pschultz/vatsim/woai"
 )
 
@@ -40,16 +41,30 @@ func prefix(ui cli.Ui, format string, args ...interface{}) *cli.PrefixedUi {
 }
 
 func main() {
+	flag.Parse()
+	args := flag.Args()
+	if len(args) != 1 {
+		fmt.Fprintf(os.Stderr, "Usage: %s PATTERN\n", filepath.Base(os.Args[0]))
+		os.Exit(1)
+	}
+
 	if d := os.Getenv("FSX_ROOT"); d != "" {
 		FSXRoot = d
 	}
 
-	if err := euroscope.LoadAirlinesFile(euroscope.DefaultAirlinesFile); err != nil {
+	if err := euroscope.LoadDefaults(); err != nil {
 		log.Fatal(err)
 	}
-	if err := euroscope.LoadAircraftFile(euroscope.DefaultAircraftFile); err != nil {
+	if err := euroscope.LoadDefaults(); err != nil {
 		log.Fatal(err)
 	}
+
+	mm, err := vPilot.LoadDefaults()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	installer := fsx.NewInstaller(FSXRoot, mm)
 
 	rootUI := &cli.BasicUi{
 		Reader:      os.Stdin,
@@ -57,14 +72,7 @@ func main() {
 		ErrorWriter: os.Stderr,
 	}
 
-	flag.Parse()
-	args := flag.Args()
-	if len(args) != 1 {
-		fmt.Fprintf(os.Stderr, "Usage: %s PATTERN\n", filepath.Base(os.Args[0]))
-		os.Exit(1)
-	}
 	term := args[0]
-
 	nodes, doc, err := search(term)
 	if err != nil {
 		log.Fatal(err)
@@ -75,8 +83,6 @@ func main() {
 		titles = append(titles, title)
 	}
 	sort.Strings(titles)
-
-	installer := fsx.NewInstaller(FSXRoot)
 
 	for _, title := range titles {
 		ui := prefix(rootUI, "%s: ", title)

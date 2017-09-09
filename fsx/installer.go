@@ -16,11 +16,13 @@ import (
 	"github.com/mitchellh/cli"
 	"github.com/pschultz/vatsim"
 	"github.com/pschultz/vatsim/EuroScope"
+	"github.com/pschultz/vatsim/vPilot"
 )
 
 type Installer struct {
-	ui      cli.Ui
-	fsxRoot string
+	ui            cli.Ui
+	fsxRoot       string
+	modelMatching *vPilot.RuleSets
 
 	// set of created dirs, to skip superfluous os.MkdirAll calls.
 	createdDirs vatsim.Set
@@ -31,9 +33,10 @@ type Installer struct {
 	buf *bytes.Buffer // re-used by loadConfig
 }
 
-func NewInstaller(fsxRoot string) *Installer {
+func NewInstaller(fsxRoot string, modelMatching *vPilot.RuleSets) *Installer {
 	return &Installer{
-		fsxRoot: fsxRoot,
+		fsxRoot:       fsxRoot,
+		modelMatching: modelMatching,
 
 		createdDirs: make(vatsim.Set),
 		existing:    make(vatsim.Set),
@@ -49,8 +52,18 @@ func (i *Installer) Install(ui cli.Ui, p Package) error {
 		return err
 	}
 
-	for _, f := range files {
-		i.existing.Add(strings.ToLower(filepath.Base(f.Name())))
+	for _, acDir := range files {
+		files, err := ioutil.ReadDir(acDir.Name())
+		if err != nil {
+			continue
+		}
+		for _, f := range files {
+			if strings.ToLower(filepath.Base(f.Name())) == "aircraft.cfg" {
+				id := strings.ToLower(filepath.Base(acDir.Name()))
+				i.existing.Add(id)
+				break
+			}
+		}
 	}
 
 	for dest, r := range p.Files() {
@@ -71,6 +84,27 @@ func (i *Installer) Install(ui cli.Ui, p Package) error {
 	}
 
 	return nil
+}
+
+func (i *Installer) ModelMatchConfig(filename string) error {
+	f, err := os.Open(filename)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	meta, err := (&Installer{}).loadConfig(f, 0, nil)
+	if err != nil {
+		return err
+	}
+
+	i.modelMatching.Add(vPilot.Rule{
+		Title:        meta.Titles[0],
+		AirlineCode:  euroscope.AirlineCode(meta.ATCAirline),
+		AircraftCode: meta.ATCModel,
+	})
+
+	return vPilot.WriteRuleSets(i.modelMatching)
 }
 
 func (i *Installer) installConfig(dest string, r io.ReadCloser) error {
@@ -102,6 +136,17 @@ func (i *Installer) installConfig(dest string, r io.ReadCloser) error {
 		return err
 	}
 
+	if i.modelMatching != nil {
+		i.modelMatching.Add(vPilot.Rule{
+			Title:        meta.Titles[0],
+			AirlineCode:  euroscope.AirlineCode(meta.ATCAirline),
+			AircraftCode: meta.ATCModel,
+		})
+		if err := vPilot.WriteRuleSets(i.modelMatching); err != nil {
+			return err
+		}
+	}
+
 	for _, t := range meta.Titles {
 		mode := "added"
 		if exists {
@@ -110,6 +155,7 @@ func (i *Installer) installConfig(dest string, r io.ReadCloser) error {
 		i.ui.Output(fmt.Sprintf("%s %s (%s): %s",
 			meta.ATCModel, meta.ATCAirline, mode, t))
 	}
+
 	return nil
 }
 
@@ -196,7 +242,8 @@ func (i *Installer) patchConfig(dest string, r io.Reader, want vatsim.Set) error
 	have := vatsim.NewSet(meta.Titles...)
 	for w := range want {
 		if have.Has(w) {
-			return fmt.Errorf("duplicate title %q in %s", w, dest)
+			i.ui.Warn("Duplicate titles; not patching config: " + dest)
+			return nil
 		}
 	}
 	// TODO: check duplicate titles globally

@@ -6,10 +6,10 @@ import (
 	"github.com/agext/levenshtein"
 )
 
-func FindMatches(want string, have []string) (exact bool, others []string) {
+func FindMatches(want string, have [][2]string) (exact bool, others [][2]string) {
 	matches := make(similar, 0)
 	for _, x := range have {
-		k := levenshtein.Match(want, x, nil)
+		k := levenshtein.Match(want, x[0], nil)
 		if k == 1.0 {
 			return true, nil
 		}
@@ -26,15 +26,15 @@ func FindMatches(want string, have []string) (exact bool, others []string) {
 
 type similar []struct {
 	score float64
-	value string
+	value [2]string
 }
 
 func (s similar) Len() int           { return len(s) }
 func (s similar) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
 func (s similar) Less(i, j int) bool { return s[j].score < s[i].score }
-func (s *similar) Add(score float64, value string) {
+func (s *similar) Add(score float64, value [2]string) {
 	*s = append(*s, struct {
 		score float64
-		value string
+		value [2]string
 	}{score, value})
 }
