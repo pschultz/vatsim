@@ -16,7 +16,7 @@ type RuleSet struct {
 	XMLName xml.Name `xml:"ModelMatchRuleSet"`
 
 	AirlineCode string `xml:"CallsignPrefix,attr"`
-	Rules       []Rule
+	Rules       []Rule `xml:"ModelMatchRule"`
 
 	dirty bool `xml:"-"`
 }
@@ -99,6 +99,22 @@ func writeRuleSet(dirname string, set *RuleSet) error {
 
 	set.dirty = false
 	return nil
+}
+
+func (rs *RuleSets) Has(airline, aircraft string) bool {
+	for _, set := range rs.sets {
+		if set.AirlineCode != airline {
+			continue
+		}
+
+		for _, r := range set.Rules {
+			if r.AircraftCode == aircraft {
+				return true
+			}
+		}
+	}
+
+	return false
 }
 
 func (rs *RuleSets) Add(rule Rule) {
