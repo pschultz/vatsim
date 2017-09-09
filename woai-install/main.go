@@ -19,6 +19,7 @@ import (
 	"github.com/mitchellh/cli"
 	"golang.org/x/net/html"
 
+	"github.com/pschultz/vatsim/EuroScope"
 	"github.com/pschultz/vatsim/fsx"
 	"github.com/pschultz/vatsim/woai"
 )
@@ -41,6 +42,13 @@ func prefix(ui cli.Ui, format string, args ...interface{}) *cli.PrefixedUi {
 func main() {
 	if d := os.Getenv("FSX_ROOT"); d != "" {
 		FSXRoot = d
+	}
+
+	if err := euroscope.LoadAirlinesFile(euroscope.DefaultAirlinesFile); err != nil {
+		log.Fatal(err)
+	}
+	if err := euroscope.LoadAircraftFile(euroscope.DefaultAircraftFile); err != nil {
+		log.Fatal(err)
 	}
 
 	rootUI := &cli.BasicUi{
@@ -72,6 +80,16 @@ func main() {
 
 	for _, title := range titles {
 		ui := prefix(rootUI, "%s: ", title)
+		answer, err := ui.Ask("Install? (Y/n)")
+		if err != nil {
+			log.Fatal(err)
+		}
+		switch strings.ToUpper(answer) {
+		case "", "Y":
+		default:
+			continue
+		}
+
 		ui.Output("Downloading")
 		for _, n := range nodes[title] {
 			b, dlID, err := downloadPackage(href(doc, n))

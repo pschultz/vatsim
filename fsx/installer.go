@@ -15,6 +15,7 @@ import (
 
 	"github.com/mitchellh/cli"
 	"github.com/pschultz/vatsim"
+	"github.com/pschultz/vatsim/EuroScope"
 )
 
 type Installer struct {
@@ -154,7 +155,7 @@ func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) (
 			meta.ATCAirline = x[1]
 
 			if buf != nil && fixFlags&fixAirlineFlag != 0 {
-				meta.ATCAirline = i.fixAirline(meta.ATCAirline)
+				meta.ATCAirline = euroscope.FixAirline(i.ui, meta.ATCAirline)
 				buf.WriteString("atc_airline=")
 				buf.WriteString(meta.ATCAirline)
 				buf.WriteByte('\n')
@@ -164,7 +165,7 @@ func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) (
 			meta.ATCModel = x[1]
 
 			if buf != nil && fixFlags&fixModelFlag != 0 {
-				meta.ATCModel = i.fixModel(meta.ATCModel)
+				meta.ATCModel = euroscope.FixAircraft(i.ui, meta.ATCModel)
 				buf.WriteString("atc_model=")
 				buf.WriteString(meta.ATCModel)
 				buf.WriteByte('\n')
@@ -178,13 +179,6 @@ func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) (
 	}
 
 	return meta, scanner.Err()
-}
-
-func (i *Installer) fixAirline(m string) string {
-	return m
-}
-func (i *Installer) fixModel(m string) string {
-	return m
 }
 
 func (i *Installer) patchConfig(dest string, r io.Reader, want vatsim.Set) error {
