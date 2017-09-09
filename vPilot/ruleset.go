@@ -31,7 +31,7 @@ type Rule struct {
 }
 
 func ReadRuleSets(dirname string) (*RuleSets, error) {
-	names, err := filepath.Glob(filepath.Join(dirname, "*.vrm"))
+	names, err := filepath.Glob(filepath.Join(dirname, "*.vmr"))
 
 	if err != nil {
 		return nil, err
@@ -92,7 +92,7 @@ func writeRuleSet(dirname string, set *RuleSet) error {
 		return err
 	}
 
-	name := filepath.Join(dirname, set.AirlineCode+".vrm")
+	name := filepath.Join(dirname, set.AirlineCode+".vmr")
 	if err := ioutil.WriteFile(name, b, 0644); err != nil {
 		return err
 	}
