@@ -25,8 +25,10 @@ type Operator struct {
 func main() {
 	apiKey := os.Getenv("ICAO_API_KEY")
 
-	var ops []Operator
-	json.NewDecoder(os.Stdin).Decode(&ops)
+	ops, err := listIOSA(apiKey)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	buckets := make([][]string, 0, len(ops)/10)
 	var codes []string
@@ -43,8 +45,6 @@ func main() {
 		ops, err := lookupICAO(apiKey, b)
 		if err != nil {
 			log.Fatal(err)
-			log.Printf("%s: %v\n", codes, err)
-			continue
 		}
 
 		for _, op := range ops {
@@ -62,7 +62,7 @@ func listIOSA(apiKey string) ([]Operator, error) {
 	q.Set("api_key", apiKey)
 	q.Set("format", "json")
 
-	u := apiBaseURL + "/airlines/designators/iosa-registry-list" + q.Encode()
+	u := apiBaseURL + "/airlines/designators/iosa-registry-list?" + q.Encode()
 	req, err := http.NewRequest("GET", u, nil)
 	if err != nil {
 		return nil, err
