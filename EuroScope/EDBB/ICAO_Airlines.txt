@@ -1457,7 +1457,7 @@ DKH	Juneyao Airlines - China	JUNEYAO AIRLINES
 DKN	Deccan Aviation - India	DECCAN
 DKT	Sioux Falls Aviation - United States	DAKOTA
 DKY	Servicios Aereos Elite - Spain	DAKOY
-DLA	Air Dolomiti - Italy	DOLOMOTI
+DLA	Air Dolomiti - Italy	DOLOMITI
 DLH	Lufthansa - Germany	LUFTHANSA
 DLI	Delta Express International - Ukraine	DELTA EXPRESS
 DLK	Deccan Aviation (Lanka) - Sri Lanka	DEKKANLANKA
