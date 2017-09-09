@@ -9,6 +9,12 @@
 			"revisionTime": "2017-08-16T13:38:31Z"
 		},
 		{
+			"checksumSHA1": "jQh1fnoKPKMURvKkpdRjN695nAQ=",
+			"path": "github.com/agext/levenshtein",
+			"revision": "5f10fee965225ac1eecdc234c09daf5cd9e7f7b6",
+			"revisionTime": "2017-02-17T06:30:20Z"
+		},
+		{
 			"checksumSHA1": "2rWSos1D+xqNSGkvEMOG3pntod8=",
 			"path": "github.com/andybalholm/cascadia",
 			"revision": "349dd0209470eabd9514242c688c403c0926d266",
