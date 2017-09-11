@@ -28,19 +28,19 @@ func main() {
 			log.Fatal(err)
 		}
 
-		atcModel, atcAirline, titles, err := fsx.InspectConfig(f)
+		metas, err := fsx.InspectConfig(f)
 		f.Close()
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		rule := vPilot.Rule{
-			AircraftCode: atcModel,
-			AirlineCode:  euroscope.AirlineCode(atcAirline),
-			Title:        titles[0],
+		for _, m := range metas {
+			mm.Add(vPilot.Rule{
+				AircraftCode: m.ATCModel,
+				AirlineCode:  euroscope.AirlineCode(m.ATCAirline),
+				Title:        m.Title,
+			})
 		}
-
-		mm.Add(rule)
 	}
 
 	vPilot.WriteRuleSets(mm)

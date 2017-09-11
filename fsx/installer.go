@@ -86,27 +86,6 @@ func (i *Installer) Install(ui cli.Ui, p Package) error {
 	return nil
 }
 
-func (i *Installer) ModelMatchConfig(filename string) error {
-	f, err := os.Open(filename)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	meta, err := (&Installer{}).loadConfig(f, 0, nil)
-	if err != nil {
-		return err
-	}
-
-	i.modelMatching.Add(vPilot.Rule{
-		Title:        meta.Titles[0],
-		AirlineCode:  euroscope.AirlineCode(meta.ATCAirline),
-		AircraftCode: meta.ATCModel,
-	})
-
-	return vPilot.WriteRuleSets(i.modelMatching)
-}
-
 func (i *Installer) installConfig(dest string, r io.ReadCloser) error {
 	acDir := strings.ToLower(filepath.Base(filepath.Dir(dest)))
 	if acDir == "" {
@@ -121,14 +100,19 @@ func (i *Installer) installConfig(dest string, r io.ReadCloser) error {
 	}
 
 	i.buf.Reset()
-	meta, err := i.loadConfig(r, flags, i.buf)
+	metas, err := i.loadConfig(r, flags, i.buf)
 	if err != nil {
 		return err
 	}
 
 	// TODO: update model matching
 	if exists {
-		err = i.patchConfig(dest, i.buf, vatsim.NewSet(meta.Titles...))
+		titles := vatsim.NewSet()
+		for _, m := range metas {
+			titles.Add(m.Title)
+		}
+
+		err = i.patchConfig(dest, i.buf, titles)
 	} else {
 		err = i.extract(dest, i.buf)
 	}
@@ -137,23 +121,25 @@ func (i *Installer) installConfig(dest string, r io.ReadCloser) error {
 	}
 
 	if i.modelMatching != nil {
-		i.modelMatching.Add(vPilot.Rule{
-			Title:        meta.Titles[0],
-			AirlineCode:  euroscope.AirlineCode(meta.ATCAirline),
-			AircraftCode: meta.ATCModel,
-		})
+		for _, meta := range metas {
+			i.modelMatching.Add(vPilot.Rule{
+				Title:        meta.Title,
+				AirlineCode:  euroscope.AirlineCode(meta.ATCAirline),
+				AircraftCode: meta.ATCModel,
+			})
+		}
 		if err := vPilot.WriteRuleSets(i.modelMatching); err != nil {
 			return err
 		}
 	}
 
-	for _, t := range meta.Titles {
+	for _, meta := range metas {
 		mode := "added"
 		if exists {
 			mode = "patched"
 		}
 		i.ui.Output(fmt.Sprintf("%s %s (%s): %s",
-			meta.ATCModel, meta.ATCAirline, mode, t))
+			meta.ATCModel, meta.ATCAirline, mode, meta.Title))
 	}
 
 	return nil
@@ -171,15 +157,16 @@ var titlePattern = regexp.MustCompile(`^(?i)^\s*title\s*=\s*(.*?)\s*$`)
 var fltsimPattern = regexp.MustCompile(`^(?i)^\s*\[fltsim\.(.*)\]`)
 
 // meta reports some things about aircraft.cfg files
-type meta struct {
-	MaxSectionIndex int
-	ATCModel        string
-	ATCAirline      string
-	Titles          []string
+type Meta struct {
+	SectionIndex int
+	ATCModel     string
+	ATCAirline   string
+	Title        string
 }
 
-func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) (meta, error) {
-	var meta meta
+func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) ([]Meta, error) {
+	var metas []Meta
+	var meta Meta
 
 	// These config files are a mess; they are clearly produced by humans, not
 	// machines. Don't even try to parse them into structs or maps or whatever.
@@ -187,16 +174,21 @@ func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) (
 	// that defines atc_airline or atc_model. In that case we emit our own,
 	// possibly fixed line.
 
+	var atcModel string
+
 	scanner := bufio.NewScanner(r)
 	for scanner.Scan() {
 		line := scanner.Text()
 		if x := fltsimPattern.FindStringSubmatch(line); x != nil {
 			n, _ := strconv.Atoi(x[1])
-			if n > meta.MaxSectionIndex {
-				meta.MaxSectionIndex = n
+			if meta.Title != "" {
+				metas = append(metas, meta)
+			}
+			meta = Meta{
+				SectionIndex: n,
 			}
 		} else if x := titlePattern.FindStringSubmatch(line); x != nil {
-			meta.Titles = append(meta.Titles, x[1])
+			meta.Title = x[1]
 		} else if x := atcAirlinePattern.FindStringSubmatch(line); x != nil {
 			meta.ATCAirline = x[1]
 
@@ -208,12 +200,12 @@ func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) (
 				continue
 			}
 		} else if x := atcModelPattern.FindStringSubmatch(line); x != nil {
-			meta.ATCModel = x[1]
+			atcModel = x[1]
 
 			if buf != nil && fixFlags&fixModelFlag != 0 {
-				meta.ATCModel = euroscope.FixAircraft(i.ui, meta.ATCModel)
+				atcModel = euroscope.FixAircraft(i.ui, atcModel)
 				buf.WriteString("atc_model=")
-				buf.WriteString(meta.ATCModel)
+				buf.WriteString(atcModel)
 				buf.WriteByte('\n')
 				continue
 			}
@@ -224,7 +216,15 @@ func (i *Installer) loadConfig(r io.Reader, fixFlags uint8, buf *bytes.Buffer) (
 		}
 	}
 
-	return meta, scanner.Err()
+	if meta.Title != "" {
+		metas = append(metas, meta)
+	}
+
+	for i := range metas {
+		metas[i].ATCModel = atcModel
+	}
+
+	return metas, scanner.Err()
 }
 
 func (i *Installer) patchConfig(dest string, r io.Reader, want vatsim.Set) error {
@@ -234,12 +234,15 @@ func (i *Installer) patchConfig(dest string, r io.Reader, want vatsim.Set) error
 	}
 	defer f.Close()
 
-	meta, err := i.loadConfig(f, 0, nil)
+	metas, err := i.loadConfig(f, 0, nil)
 	if err != nil {
 		return err
 	}
 
-	have := vatsim.NewSet(meta.Titles...)
+	have := vatsim.NewSet()
+	for _, m := range metas {
+		have.Add(m.Title)
+	}
 	for w := range want {
 		if have.Has(w) {
 			i.ui.Warn("Duplicate titles; not patching config: " + dest)
@@ -250,7 +253,13 @@ func (i *Installer) patchConfig(dest string, r io.Reader, want vatsim.Set) error
 
 	// f is at the end right now, so we can start appending fltsim sections
 	// from buf.
-	n := meta.MaxSectionIndex + 1
+	maxSectionIndex := 0
+	for _, m := range metas {
+		if m.SectionIndex > maxSectionIndex {
+			maxSectionIndex = m.SectionIndex
+		}
+	}
+	n := maxSectionIndex + 1
 	write := false
 
 	scanner := bufio.NewScanner(r)
