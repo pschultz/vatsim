@@ -55,7 +55,7 @@ ACD	Academy Airlines - United States	ACADEMY
 ACE	Race Cargo Airlines - Ghana	Fastcargo
 ACF	Centro de Formacion Aeronautica de Canarias - Spain	FORCAN
 ACG	Air Partner - United Kingdom	AIR PARTNER
-ACH	Air Cargo Plus - Liberia	AIR PLUS
+ACH	Air Child - Germany	AIRCHILD
 ACI	Air Caledonie International - France	AIRCALIN
 ACJ	Air Corporate - FR	FLY BUSINESS
 ACK	Nantucket Airlines - United States	ACK AIR
