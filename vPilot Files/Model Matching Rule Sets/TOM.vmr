@@ -1,0 +1,37 @@
+<ModelMatchRuleSet CallsignPrefix="TOM">
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B733" ModelName="WoA_AIA_B733v2_Winglet_TOM-Thomsonfly"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B738" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="731" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="732" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="733" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="734" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="735" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="736" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="737" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="738" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="739" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B731" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B732" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B734" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B735" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B736" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B737" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B739" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="E737" ModelName="WoA_AIA_B738_W_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B763" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="762" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="763" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="764" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="767" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B762" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B764" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B767" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="E767" ModelName="WoA_AIA_B763_GE_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B752" ModelName="WoA_AIA_B752_RR_TOM-Thomsonfly"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="752" ModelName="WoA_AIA_B752_RR_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="753" ModelName="WoA_AIA_B752_RR_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="757" ModelName="WoA_AIA_B752_RR_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B753" ModelName="WoA_AIA_B752_RR_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="B757" ModelName="WoA_AIA_B752_RR_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="TOM" TypeCode="T204" ModelName="WoA_AIA_B752_RR_TOM-Thomsonfly" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>

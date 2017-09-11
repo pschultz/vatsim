@@ -1,0 +1,3 @@
+<ModelMatchRuleSet CallsignPrefix="ACA">
+	<ModelMatchRule CallsignPrefix="ACA" TypeCode="A319" ModelName="EZdok Aircraft Universal camera"></ModelMatchRule>
+</ModelMatchRuleSet>

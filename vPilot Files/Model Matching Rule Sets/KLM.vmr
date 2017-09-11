@@ -1,0 +1,58 @@
+<ModelMatchRuleSet CallsignPrefix="KLM">
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B772" ModelName="WoA_TFS_B777-200GE_KLM-KLM Royal Dutch Airlines Asia New"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B773" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines Skyteam"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="772" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="773" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="777" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B777" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B77F" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B77L" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B77W" ModelName="WoA_TFS_B777-300ER_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B787" ModelName="WoA_CS_B787-9_KLM-KLM Royal Dutch Airlines"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="787" ModelName="WoA_CS_B787-9_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="788" ModelName="WoA_CS_B787-9_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="789" ModelName="WoA_CS_B787-9_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B788" ModelName="WoA_CS_B787-9_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B789" ModelName="WoA_CS_B787-9_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="A330" ModelName="WoA_TFS_A330-300_GE_KLM-KLM Royal Dutch Airlines"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="330" ModelName="WoA_TFS_A330-200_GE_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="332" ModelName="WoA_TFS_A330-200_GE_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="333" ModelName="WoA_TFS_A330-200_GE_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="A332" ModelName="WoA_TFS_A330-200_GE_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="A333" ModelName="WoA_TFS_A330-200_GE_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B744" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="741" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="742" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="743" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="744" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="747" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="748" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B741" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B742" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B743" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B747" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B748" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B74D" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B74R" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B74S" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="BSCA" ModelName="WoA_FAIB_FSX_B747-400_GE_KLM-KLM Royal Dutch Airlines Combi" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B737" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="731" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="732" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="733" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="734" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="735" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="736" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="737" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="738" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="739" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B731" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B732" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B733" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B734" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B735" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B736" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B738" ModelName="WoA_FAIB_FSX_B737-800_W_KLM-KLM Royal Dutch Airlines Retro"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="B739" ModelName="WoA_FAIB_FSX_B737-900_W_KLM-KLM Royal Dutch Airlines PH-BXO"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="KLM" TypeCode="E737" ModelName="WoA_FAIB_FSX_B737-700_W_KLM-KLM Royal Dutch Airlines" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>

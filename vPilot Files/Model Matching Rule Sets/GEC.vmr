@@ -1,0 +1,12 @@
+<ModelMatchRuleSet CallsignPrefix="GEC">
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="MD11" ModelName="WoA_FSP_FSX_MD11_GEC-Lufthansa Cargo Aktion"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="B772" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="772" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="773" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="777" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="B773" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="B777" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="B77F" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="B77L" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="GEC" TypeCode="B77W" ModelName="WoA_TFS_B777-200LR_GEC-Lufthansa Cargo" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>

@@ -1,0 +1,44 @@
+<ModelMatchRuleSet CallsignPrefix="OAL">
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="A340" ModelName="WoA_TFS_A340-300_OAL-Olympic Airways"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="AT43" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="AN24" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="AN26" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="AT44" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="AT45" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="AT72" ModelName="WoA_OSP_ATR72_200_OAL-Olympic Airways_SX-BIL"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="D328" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="F27" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="F50" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="F60" ModelName="WoA_PAI_ATR42_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="DH8A" ModelName="WoA_PAI_DH8B_OAL-Olympic Airways"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="DH8B" ModelName="WoA_PAI_DH8B_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="DH8C" ModelName="WoA_PAI_DH8B_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="DH8D" ModelName="WoA_PAI_DH8B_OAL-Olympic Airways" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="A320" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_AirVia"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="318" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_HellasJet" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="319" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_HellasJet" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="320" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_HellasJet" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="321" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_HellasJet" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="A318" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_HellasJet" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="A319" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_HellasJet" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="A321" ModelName="WoA_DJC_A320_IAE_OAL-OLympic Airways_opb_HellasJet" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B734" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKU"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="731" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="732" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="733" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="734" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="735" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="736" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="737" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="738" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="739" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B731" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B732" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B733" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B735" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B736" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B737" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B738" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="B739" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="OAL" TypeCode="E737" ModelName="WoA_AIA_B734v2_LogoLight_OAL-Olympic Airways_SX-BKG" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>

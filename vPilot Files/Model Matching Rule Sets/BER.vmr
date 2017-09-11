@@ -1,0 +1,49 @@
+<ModelMatchRuleSet CallsignPrefix="BER">
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="A319" ModelName="WoA_DJC_A319_IAE_BER-Air Berlin"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="A330" ModelName="WoA_TFS_A330-300_PW_BER-Air Berlin_opd LTU_New Colours"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="330" ModelName="WoA_TFS_A330-200_PW_BER-Air Berlin_opd LTU" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="332" ModelName="WoA_TFS_A330-200_PW_BER-Air Berlin_opd LTU" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="333" ModelName="WoA_TFS_A330-200_PW_BER-Air Berlin_opd LTU" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="A332" ModelName="WoA_TFS_A330-200_PW_BER-Air Berlin_opd LTU" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="A333" ModelName="WoA_TFS_A330-200_PW_BER-Air Berlin_opd LTU" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B752" ModelName="WoA_AIA_B752_RR_BER-Air Berlin_opd Belair_Interim Colours"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="752" ModelName="WoA_AIA_B752_RR_BER-Air Berlin_opd Belair_Interim Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="753" ModelName="WoA_AIA_B752_RR_BER-Air Berlin_opd Belair_Interim Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="757" ModelName="WoA_AIA_B752_RR_BER-Air Berlin_opd Belair_Interim Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B753" ModelName="WoA_AIA_B752_RR_BER-Air Berlin_opd Belair_Interim Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B757" ModelName="WoA_AIA_B752_RR_BER-Air Berlin_opd Belair_Interim Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="T204" ModelName="WoA_AIA_B752_RR_BER-Air Berlin_opd Belair_Interim Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="A320" ModelName="WoA_DJC_A320-200_CFM_BER-Air Berlin_opd LTU_New Colours"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="318" ModelName="WoA_DJC_A320-200_CFM_BER-Air Berlin_opd LTU_New Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="319" ModelName="WoA_DJC_A320-200_CFM_BER-Air Berlin_opd LTU_New Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="320" ModelName="WoA_DJC_A320-200_CFM_BER-Air Berlin_opd LTU_New Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="321" ModelName="WoA_DJC_A320-200_CFM_BER-Air Berlin_opd LTU_New Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="A318" ModelName="WoA_DJC_A320-200_CFM_BER-Air Berlin_opd LTU_New Colours" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="A321" ModelName="WoA_DJC_A321_CFM_BER-Air Berlin_opd LTU_New Colours"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B737" ModelName="WoA_AIA_B737_BER-Air Berlin_opd Germania Interim Colours"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="731" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="732" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="733" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="734" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="735" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="736" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="737" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="738" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="739" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B731" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B732" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B733" ModelName="WoA_AIA_B733v2_LogoLight_BER-Air Berlin_opd DBA"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B734" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B735" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B736" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B738" ModelName="WoA_AIA_B738_BER-Air Berlin"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="B739" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="E737" ModelName="WoA_AIA_B737_W_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="F100" ModelName="WoA_FM_F100_BER-Air Berlin"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="ASTR" ModelName="WoA_FM_F100_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="BA11" ModelName="WoA_FM_F100_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="F28" ModelName="WoA_FM_F100_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="F70" ModelName="WoA_FM_F100_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="GL5T" ModelName="WoA_FM_F100_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="BER" TypeCode="GLEX" ModelName="WoA_FM_F100_BER-Air Berlin" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>

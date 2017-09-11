@@ -1,0 +1,18 @@
+<ModelMatchRuleSet CallsignPrefix="EIN">
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="A330" ModelName="WoA_TFS_A330-300_GE_EIN-Aer Lingus"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="A321" ModelName="WoA_FAIB_FSX_A321_CFM_EIN-Aer Lingus"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="318" ModelName="WoA_FAIB_FSX_A321_CFM_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="319" ModelName="WoA_FAIB_FSX_A321_CFM_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="320" ModelName="WoA_FAIB_FSX_A321_CFM_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="321" ModelName="WoA_FAIB_FSX_A321_CFM_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="A318" ModelName="WoA_FAIB_FSX_A321_CFM_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="A319" ModelName="WoA_FAIB_FSX_A319_CFM_EIN-Aer Lingus"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="A320" ModelName="WoA_FAIB_FSX_A320_CFM_EIN-Aer Lingus GreenSpirit"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="B752" ModelName="WoA_AIG_B757-200W_EIN-Aer Lingus"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="752" ModelName="WoA_AIG_B757-200W_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="753" ModelName="WoA_AIG_B757-200W_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="757" ModelName="WoA_AIG_B757-200W_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="B753" ModelName="WoA_AIG_B757-200W_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="B757" ModelName="WoA_AIG_B757-200W_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="EIN" TypeCode="T204" ModelName="WoA_AIG_B757-200W_EIN-Aer Lingus" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>

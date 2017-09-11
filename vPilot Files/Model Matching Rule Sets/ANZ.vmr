@@ -1,0 +1,56 @@
+<ModelMatchRuleSet CallsignPrefix="ANZ">
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="A320" ModelName="WoA_DJC_A320-200_IAE_ANZ-Air New Zealand"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B772" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="772" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="773" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="777" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B773" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B777" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B77F" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B77L" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B77W" ModelName="WoA_TFS_B777-200RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B733" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="731" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="732" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="733" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="734" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="735" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="736" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="737" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="738" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="739" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B731" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B732" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B734" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B735" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B736" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B737" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B738" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B739" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="E737" ModelName="WoA_AIA_B733v2_LogoLight_ANZ-Air New Zealand_NGE" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B744" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="741" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="742" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="743" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="744" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="747" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="748" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B741" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B742" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B743" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B747" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B748" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B74D" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B74R" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B74S" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="BSCA" ModelName="WoA_AIA_B744_RR_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B763" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="762" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="763" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="764" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="767" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B762" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B764" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="B767" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="ANZ" TypeCode="E767" ModelName="WoA_AIA_B763_GE_W_ANZ-Air New Zealand" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>

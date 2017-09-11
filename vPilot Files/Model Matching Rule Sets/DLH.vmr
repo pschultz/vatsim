@@ -1,0 +1,66 @@
+<ModelMatchRuleSet CallsignPrefix="DLH">
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B738" ModelName="WoA_AIA_B738_W_DLH-Lufthansa-PrivatAir"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A319" ModelName="WoA_DJC_A319_IAE_DLH-Lufthansa-PrivatAir"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="318" ModelName="WoA_DJC_A319_IAE_DLH-Lufthansa-PrivatAir" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="319" ModelName="WoA_DJC_A319_IAE_DLH-Lufthansa-PrivatAir" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="320" ModelName="WoA_DJC_A319_IAE_DLH-Lufthansa-PrivatAir" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="321" ModelName="WoA_DJC_A319_IAE_DLH-Lufthansa-PrivatAir" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A318" ModelName="WoA_DJC_A319_IAE_DLH-Lufthansa-PrivatAir" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A320" ModelName="WoA_DJC_A320-200_CFM_DLH-Lufthansa"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A321" ModelName="WoA_DJC_A321_IAE_DLH-Lufthansa_D-AISO"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B744" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="741" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="742" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="743" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="744" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="747" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="748" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B741" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B742" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B743" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B747" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B748" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B74D" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B74R" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B74S" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="BSCA" ModelName="WoA_AIA_B744_GE_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A300" ModelName="WoA_TFS_A300-600_DLH-Lufthansa"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="300" ModelName="WoA_TFS_A300-600_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="306" ModelName="WoA_TFS_A300-600_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A306" ModelName="WoA_TFS_A300-600_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A30B" ModelName="WoA_TFS_A300-600_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B733" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="731" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="732" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="733" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="734" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="735" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="736" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="737" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="738" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="739" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B731" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B732" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B734" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B735" ModelName="WoA_AIA_B735v2_LogoLight_DLH-Lufthansa"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B736" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B737" ModelName="WoA_AIA_B737_W_DLH-Lufthansa-PrivatAir"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="B739" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="E737" ModelName="WoA_AIA_B733v2_LogoLight_DLH-Lufthansa_D-ABEL" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A340" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHR"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="340" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="342" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="343" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="345" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="346" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A342" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A343" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A345" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A346" ModelName="WoA_TFS_A340-600_DLH-Lufthansa_D-AIHC" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A330" ModelName="WoA_TFS_A330-300_RR_DLH-Lufthansa"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="330" ModelName="WoA_TFS_A330-300_RR_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="332" ModelName="WoA_TFS_A330-300_RR_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="333" ModelName="WoA_TFS_A330-300_RR_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A332" ModelName="WoA_TFS_A330-300_RR_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+	<ModelMatchRule CallsignPrefix="DLH" TypeCode="A333" ModelName="WoA_TFS_A330-300_RR_DLH-Lufthansa" Substitute="true"></ModelMatchRule>
+</ModelMatchRuleSet>
