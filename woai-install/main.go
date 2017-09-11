@@ -140,6 +140,7 @@ func search(pattern string) (map[string][]*html.Node, *goquery.Document, error) 
 	nodes := make(map[string][]*html.Node)
 	dlPageAnchors(nodes, re, doc.Find("#airlines ~ table").First())
 	dlPageAnchors(nodes, re, doc.Find("#cargo ~ table").First())
+	dlPageAnchors(nodes, re, doc.Find("#ceased ~ table").First())
 
 	return nodes, doc, nil
 }
