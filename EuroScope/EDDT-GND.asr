@@ -26,6 +26,26 @@ ARTCC boundary:FIR_LZBB:
 ARTCC low boundary:EDDB/CTR:
 ARTCC low boundary:EDDT/CTR:
 ARTCC low boundary:Restriced/ED-R146_Berlin_0_5000:
+Fixes:BATEL:name
+Fixes:BATEL:symbol
+Fixes:DT261:name
+Fixes:DT261:symbol
+Fixes:DT263:name
+Fixes:DT263:symbol
+Fixes:DT264:name
+Fixes:DT264:symbol
+Fixes:LANUM:name
+Fixes:LANUM:symbol
+Fixes:NASAT:name
+Fixes:NASAT:symbol
+Fixes:NUKRO:name
+Fixes:NUKRO:symbol
+Fixes:RADEL:name
+Fixes:RADEL:symbol
+Fixes:RENKI:name
+Fixes:RENKI:symbol
+Fixes:TERDA:name
+Fixes:TERDA:symbol
 Free Text:EDDB\19:freetext
 Free Text:EDDB\20:freetext
 Free Text:EDDB\20S:freetext
