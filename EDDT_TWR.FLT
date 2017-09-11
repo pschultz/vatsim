@@ -1,0 +1,390 @@
+
+[Main]
+Title=EDDT TWR
+Description=""
+AppVersion=10.0.62615
+FlightVersion=1
+
+[Options]
+Sound=False
+Pause=False
+Moonlight=True
+TextDisplayPage=0
+SlewDisplayPage=1
+AxisIndicator=Off
+Titles=False
+
+[Kneeboard]
+Visible=False
+Location=21, 376
+PageId=0
+Page0Scroll=0, 0
+Page1Scroll=0, 0
+Page2Scroll=0, 0
+Page3Scroll=0, 0
+Page4Scroll=0, 0
+Page5Scroll=0, 0
+Page6Scroll=0, 0
+
+[Atc_Menu]
+ScreenUniCoords=1944, 1219, 4303, 3706
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+
+[Panels]
+Panel.On=True
+HUD.On=False
+
+[Sim.0]
+Sim=Tower Controller
+
+[SimVars.0]
+Latitude=N52° 32' 16.63"
+Longitude=E13° 17' 39.17"
+Altitude=-000100.00
+Pitch=0
+Bank=0
+Heading=0.0
+PVelBodyAxis=0
+BVelBodyAxis=0
+HVelBodyAxis=0
+XVelBodyAxis=0
+YVelBodyAxis=0
+ZVelBodyAxis=0
+SimOnGround=False
+OnPlatformHeight=-9999999999
+
+[Window.1]
+Order=0
+Active=True
+Undocked=False
+Maximized=True
+ScreenUniCoords=0, 0, 8192, 6144
+UndocCoords=0, 0, 0, 0
+CurrentCamera={13605371-4065-417D-8DB8-3FC66A3DBE7B}
+
+[Camera.1.3]
+Guid={13605371-4065-417D-8DB8-3FC66A3DBE7B}
+Zoom=0.5
+Translation=-64, 121, 1858
+// right, height, forward (roughly meters)
+Rotation=0, 0, 0
+// pitch, yaw, roll
+
+[Camera.1.1]
+Guid={B1386D92-4782-4682-A137-738E25D1BAB5}
+Zoom=1
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[Camera.1.2]
+Guid={C95EAB58-9E4A-4E2A-A34C-D8D9D948F078}
+Zoom=0.69999998807907104
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[Camera.1.4]
+Guid={9B4E9F0A-55F5-44E3-9F3A-DF13C8D47844}
+Zoom=1
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[Camera.1.5]
+Guid={04B9B8DC-D69A-451C-90C2-4143765D5589}
+Zoom=1
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[Camera.1.6]
+Guid={9AE691DA-0FAD-4E3B-9D44-1100C98E43A5}
+Zoom=1
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[Camera.1.7]
+Guid={BCA3FDD1-FB83-4BBA-8407-4922A7F0D00C}
+Zoom=1
+Translation=0, 0, 0
+ChaseDirection=90
+ChaseDistance=28.041599273681641
+ChaseAltitude=0.91439998149871826
+
+[Camera.1.8]
+Guid={BCA3FDD1-FB83-4BBA-8407-4922A7F0D00D}
+Zoom=1
+Translation=0, 0, 0
+ChaseDirection=-135
+ChaseDistance=37.5
+ChaseAltitude=0.80000001192092896
+
+[Camera.1.9]
+Guid={6B79DD49-9B4A-439D-BF40-ACBF157B0BA0}
+Zoom=10
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[Camera.1.10]
+Guid={A2849229-938A-448F-8AC6-01EF2291C171}
+Zoom=80.300003051757813
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[Camera.1.11]
+Guid={60BC0819-BD04-4AF6-8954-8FC8AA3545FF}
+Zoom=8
+Translation=0, 0, 0
+Rotation=0, 0, 0
+
+[EFIS]
+Active=False
+NavAid=VOR 1
+Type=Rectangles
+Density=Thin
+Range=Short
+Altitude=0
+Flags=0
+
+[ATC_AgentManager]
+NumberofAgents=0
+
+[ATC_Aircraft.0]
+ActiveFlightPlan=False
+RequestedFlightPlan=False
+AcState=ACSTATE_REQUEST_TAXI_CLEARANCE_OUT_VFR_ATIS
+NumberofWaypoints=0
+ClearanceFlags=80
+CtCur=CLEARANCE_NONE
+WaypointNext=0
+AltCleared=-1
+HdgAssigned=-1
+SquawkAssigned=1593119232
+LandingSequence=LANDING_NONE
+DepartureRequest=DEPARTURE_VFR_REQUEST_NONE
+ParkingRequest=PARKING_NAME_NONE
+ParkingTypeRequest=PARKING_TYPE_NONE
+PatternLeg=PATTERN_LEG_NONE
+ApproachIndex=-1
+ApproachTransitionIndex=-1
+ApproachRequestIndex=-1
+ApproachTransitionRequestIndex=-1
+RunwayIndex=-1
+RunwayRequestIndex=-1
+ParkingIndex=-1
+FlightFollowing=FLIGHT_FOLLOWING_NO
+AirspaceTransition=AIRSPACE_TRANSITION_NONE
+BVAirspaceTransition=BV_TYPE_NONE
+BVAirspaceTransitionReq=BV_TYPE_NONE
+TakeoffSequence=TAKEOFF_SEQUENCE_NONE
+LandingSequenceNumber=-1
+TaxiRouteCurrent=-1
+CruisingAltitude=-1
+RequestedCruisingAltitude=-1
+ExpectedAltitude=-1
+AircraftSignature=1,0
+
+[ATC_AircraftManager]
+NumberofAircraft=1
+
+[ATC_MessageSystem]
+FrequencyNodes=0
+
+[DateTimeSeason]
+Season=Summer
+Year=2017
+Day=242
+Hours=20
+Minutes=39
+Seconds=3
+
+[Panel.1]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=0
+ViewsOn=0
+
+[Panel.2]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=266
+ViewsOn=1
+
+[Panel.3]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=260
+ViewsOn=0
+
+[Panel.4]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=261
+ViewsOn=0
+
+[Panel.5]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=262
+ViewsOn=0
+
+[Panel.6]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=263
+ViewsOn=0
+
+[Panel.7]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22001
+ViewsOn=0
+
+[Panel.8]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22002
+ViewsOn=0
+
+[Panel.9]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22003
+ViewsOn=0
+
+[Panel.10]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22004
+ViewsOn=0
+
+[Panel.11]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22004
+ViewsOn=0
+
+[Panel.12]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22005
+ViewsOn=0
+
+[Panel.13]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22004
+ViewsOn=0
+
+[Panel.14]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22006
+ViewsOn=0
+
+[Panel.15]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22007
+ViewsOn=0
+
+[Panel.16]
+ScreenUniCoords=0, 0, 0, 0
+UndocCoords=0, 0, 0, 0
+Visible=False
+Undocked=False
+HiddenOn=False
+ID=22008
+ViewsOn=0
+
+[User Tip Window]
+Undocked=False
+ScreenUniCoords=500, 400, 7192, 650
+UndocCoords=0, 0, 0, 0
+
+[Avionics.0]
+Comm1Active=128.300
+Comm1Standby=128.250
+Comm2Active=127.800
+Comm2Standby=127.900
+Nav1Active=113.70
+Nav1Standby=117.20
+OBS1=340
+Nav2Active=110.60
+Nav2Standby=116.80
+OBS2=315
+Transponder=1200
+ADFActive=284
+ADF2Active=240
+DMESelected=1
+ComTransmit=1
+ComReceiveBoth=False
+AudioNav1Listen=False
+AudioNav2Listen=False
+AudioMarkerListen=False
+AudioDmeListen=False
+AudioAdfListen=False
+AudioAdf2Listen=False
+AvionicsSwitch=True
+
+[Slew.0]
+Active=False
+
+[Freeze.0]
+Location=False
+Altitude=False
+Attitude=False
+
+[SimScheduler]
+SimSpeed=001.00
+SimTime=569.01687919113022
+
+[Weather]
+WeatherType=3
+
+[ResourcePath]
+Path=flights\other\
